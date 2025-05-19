@@ -45,9 +45,10 @@ const HomePage = () => {
   </p>
 
   <p className=" font-heleveticaNeue font-normal text-[1rem] md:text-[1.125rem] leading-[1.4] tracking-[0.01em] align-middle text-[#570B97] mt-4 whitespace-pre-line">
-    The result? Strategies that work better and cost less. We're self-funded, independent 
-    and focused on one thing: delivering results you can measure.
-  </p>
+  The result? Strategies that work better and cost less. We&apos;re self-funded, independent 
+  and focused on one thing: delivering results you can measure.
+</p>
+
 </div>
          </div>
          </div>

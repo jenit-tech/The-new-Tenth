@@ -74,10 +74,11 @@ export default function RightSideBox() {
             Digital signals that uncovered Asia’s vitamin revolution
           </p>
           <p className="text-white font-normal text-sm md:text-base leading-[140%] tracking-[0.01em] font-heleveticaNeue mt-2">
-            Pfizer (now Haleon) needed to understand changing attitudes toward multivitamins across Asia's growing wellness markets.<br />
-            Instead of relying on lengthy surveys, we analyzed search data from Google and Baidu to uncover the changing consumer interest and behavior in wellness today.<br /><br />
-            The findings helped the brand refine their product innovation and messaging strategy that resonated with Chinese and Taiwanese consumers.
-          </p>
+  Pfizer (now Haleon) needed to understand changing attitudes toward Asia&apos;s growing wellness markets.<br />
+  Instead of relying on lengthy surveys, we analyzed search data from Google and Baidu to uncover the changing consumer interest and behavior in wellness today.<br /><br />
+  The findings helped the brand refine their product innovation and messaging strategy that resonated with Chinese and Taiwanese consumers.
+</p>
+
           <span className="text-white font-medium text-sm md:text-base leading-[140%] tracking-[0.01em] font-heleveticaNeue block mt-2 cursor-pointer">
             Read More
           </span>
@@ -97,11 +98,12 @@ export default function RightSideBox() {
             Rethinking wellness with data
           </p>
           <p className="text-white font-normal text-sm md:text-base leading-[140%] tracking-[0.01em] font-heleveticaNeue mt-2">
-            We analysed what Indonesian consumers were actually saying and discovered insights that helped Nestlé to completely rethink their Green Coffee approach.<br /><br />
-            The discoveries shaped the winning narrative. Instead of complicated health messages, they focused on beauty benefits that people really wanted.<br /><br />
-            Starting with just social media posts, the idea connected so well that it grew into Nestlé's main campaign.<br /><br />
-            The result? They went from trailing the competition to becoming Indonesia's coffee leader.
-          </p>
+  We analysed what Indonesian consumers were actually saying and discovered insights that helped Nestlé to completely rethink their Green Coffee approach.<br /><br />
+  The discoveries shaped the winning narrative. Instead of complicated health messages, they focused on beauty benefits that people really wanted.<br /><br />
+  Starting with just social media posts, the idea connected so well that it grew into Nestlé&apos;s main campaign.<br /><br />
+  The result? They went from trailing the competition to becoming Indonesia&apos;s coffee leader.
+</p>
+
           <span className="text-white font-medium text-sm md:text-base leading-[140%] tracking-[0.01em] font-heleveticaNeue block mt-2 cursor-pointer">
             Read More
           </span>

@@ -24,10 +24,10 @@ const AboutUsRightSection = () => {
   creative excellence and data-driven precision to every challenge.
 
   As former Managing Director of JWT Malaysia and Head of Integrated Strategy at
-  McCann Singapore, he's helped transform how brands connect with audiences in the digital age.
+  McCann Singapore, he&apos;s helped transform how brands connect with audiences in the digital age.
 
-  Subhendu’s work has earned the industry's highest recognition, including a Cannes Lions
-  Grand Prix and Gold in Data Driven Marketing. Beyond his agency leadership, he's shaped
+  Subhendu’s work has earned the industry&apos;s highest recognition, including a Cannes Lions
+  Grand Prix and Gold in Data Driven Marketing. Beyond his agency leadership, he&apos;s shaped
   the next generation of talent as a visiting lecturer at Hyper Island Singapore,
   Google Squared, and Nanyang Technological University.
 
@@ -35,6 +35,7 @@ const AboutUsRightSection = () => {
   combining strategic vision with practical implementation to unlock new opportunities in
   an increasingly complex landscape.
 </p>
+
 
 
 </div>
