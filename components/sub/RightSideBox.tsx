@@ -136,7 +136,9 @@ export default function RightSideBox({  }) {
   return (
     <div
       key={card.id}
-      ref={(el) => (cardRefs.current[index] = el)}
+      ref={(el) => {
+        cardRefs.current[index] = el;
+      }}
       onClick={() => handleCardClick(index)}
       className={`cursor-pointer rounded-[28px] p-5 border-b bg-[${bgColor}] backdrop-blur-sm shadow-[0_0_5px_0_#A29DBB] w-full`}
       style={{ borderBottom: `4px solid ${borderColor}` }}
