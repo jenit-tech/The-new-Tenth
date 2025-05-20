@@ -9,7 +9,7 @@ const Navbar = () => {
   const toggleMenu = () => setMobileMenuOpen(!mobileMenuOpen)
 
   return (
-    <nav className="fixed top-0 left-0 right-0 w-full flex items-center justify-between h-36 px-20 py-3 bg-[#F2F0FA66] backdrop-blur-sm z-50 ">
+    <nav className="fixed top-0 left-0 right-0 w-full flex items-center justify-between h-36 px-20 py-3 bg-[#F2F0FA]  z-50 ">
       {/* Logo Image */}
       <Image src="/logo.png" alt="Description" width={120} height={120} />
 
