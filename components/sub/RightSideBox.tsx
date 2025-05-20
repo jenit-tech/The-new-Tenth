@@ -1,8 +1,8 @@
 "use client"
-import * as React from 'react';
+import  React, { useRef }  from 'react';
 
 export default function RightSideBox({  }) {
-  const cardRefs = React.useRef([]);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([])
   const [activeIndex, setActiveIndex] = React.useState(0);
 
   const cards = [
