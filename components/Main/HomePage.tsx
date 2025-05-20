@@ -56,7 +56,7 @@ const HomePage = () => {
          </div>
 
          {/* Right Side Box with scroll */}
-         <div className="w-full lg:w-1/2 mb-50">
+         <div className="w-full lg:w-1/2">
           <RightSideBox />
         </div>
        </div>

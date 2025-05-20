@@ -43,7 +43,7 @@ const CompanyRightSection = () => {
   }
 
   return (
-    <div className="w-full px-4 py-8">
+    <div className="w-full  px-4 py-8">
       <div ref={emblaRef} className="overflow-hidden w-full">
         <div className="flex select-none">
           {groupedLogos.map((group, index) => (

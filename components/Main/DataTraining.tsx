@@ -3,11 +3,12 @@ import RightSideDataTraining from '../sub/RightSideDataTraining'
 
 const DataTraining = () => {
   return (
-    <div className="pt-36 pr-10 min-h-screen bg-gradient-to-b from-purple-50 via-white to-purple-50">
-      <div className="container mx-auto px-4 md:px-8">
-        <main className="py-12 md:py-20 flex flex-col items-center justify-between gap-12 lg:flex-row lg:items-center lg:gap-16">
+    <div className="pt-36 pr-20 bg-gradient-to-b from-purple-50 via-white to-purple-50">
+      <div className="container">
+        <div className=" mx-auto px-4 md:px-8 py-12 md:py-20 relative top-[20px] left-[40px] gap-[10px] flex flex-col lg:flex-row lg:gap-16 pb-10">
           
-          <div className="w-full lg:w-1/2">
+          {/* Left Content */}
+          <div className="w-full lg:w-1/2 mb-10">
             <h2 className="font-helveticaNeue font-bold text-[2rem] md:text-[2.5rem] leading-[1.2] tracking-[0.01em] text-[#570B97] mb-4">
               We preach what we practice: Data Training from Real World Practitioners
             </h2>
@@ -20,8 +21,9 @@ const DataTraining = () => {
             <RightSideDataTraining />
           </div>
 
-        </main>
+        </div>
       </div>
+      
     </div>
   )
 }

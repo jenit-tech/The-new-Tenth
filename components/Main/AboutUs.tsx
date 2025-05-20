@@ -3,7 +3,7 @@ import AboutUsRightSection from '../sub/AboutUsRightSection' // Adjust path as n
 
 const AboutUs = () => {
   return (
-    <div className="pt-36 pr-7 bg-gradient-to-b from-purple-50 via-white to-purple-50">
+    <div className="pt-36 pr-20 bg-gradient-to-b from-purple-50 via-white to-purple-50">
       <div className="container">
         <div className=" mx-auto px-4 md:px-8 py-12 md:py-20 relative top-[20px] left-[40px] gap-[10px] flex flex-col lg:flex-row lg:gap-16 pb-10">
           
