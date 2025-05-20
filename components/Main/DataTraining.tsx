@@ -3,7 +3,7 @@ import RightSideDataTraining from '../sub/RightSideDataTraining'
 
 const DataTraining = () => {
   return (
-    <div className="pt-36 min-h-screen bg-gradient-to-b from-purple-50 via-white to-purple-50">
+    <div className="pt-36 pr-10 min-h-screen bg-gradient-to-b from-purple-50 via-white to-purple-50">
       <div className="container mx-auto px-4 md:px-8">
         <main className="py-12 md:py-20 flex flex-col items-center justify-between gap-12 lg:flex-row lg:items-center lg:gap-16">
           

@@ -9,6 +9,7 @@ export default function RightSideBox() {
   return (
     <div className=" relative w-full">
            {/* Card 1: OCBC */}
+         
            <div className="rounded-[28px] p-5 border-b border-b-[#674EA7] bg-[#674EA7] backdrop-blur-sm shadow-[0_0_5px_0_#A29DBB] max-w-full mb-5 ">
         <div className="mb-4">
           <span className="text-[#FFFFFF] font-medium text-sm md:text-base leading-[140%] tracking-[0.01em]  font-heleveticaNeue block">

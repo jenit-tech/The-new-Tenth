@@ -1,19 +1,21 @@
 import React from 'react'
 import RightSideBox from '../sub/RightSideBox'
 
+import RightSideBoxx from '../sub/RightSideBoxx'
+
 
 
 const HomePage = () => {
   return (
    <>
-     <div className="pt-36 bg-gradient-to-b from-purple-50 via-white to-purple-50
-">
+     <div className="pr-15 pt-36 bg-gradient-to-b from-purple-50 via-white to-purple-50">
      <div className="container">
-       <main className=" mx-auto px-4 md:px-8 py-12 md:py-20 relative top-[20px] left-[40px] gap-[10px] flex flex-col lg:flex-row lg:gap-16 pb-10">
+       <div className=" mx-auto px-4 md:px-8 py-12 md:py-20 relative top-[20px] left-[40px] gap-[10px] flex flex-col lg:flex-row lg:gap-16 pb-10">
          
          {/* Left Content */}
          <div className="w-full lg:w-1/2 lg:pr-8 mb-10">
-         <div className="sticky top-20">
+         <div className="sticky top-50">
+
          <h2
   className="
     font-heleveticaNeue font-bold text-[2rem] md:text-[2.5rem] leading-[1.2] tracking-[0.01em]
@@ -57,7 +59,7 @@ const HomePage = () => {
          <div className="w-full lg:w-1/2 mb-50">
           <RightSideBox />
         </div>
-       </main>
+       </div>
      </div>
      </div>
    </>
