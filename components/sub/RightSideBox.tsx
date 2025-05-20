@@ -111,12 +111,13 @@ export default function RightSideBox({  }) {
     cardRefs.current = cardRefs.current.slice(0, cards.length);
   }, [cards.length]);
 
-  const handleDotClick = (index) => {
+  const handleDotClick = (index: number) => {
     setActiveIndex(index);
     cardRefs.current[index]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
+  
 
-  const handleCardClick = (index) => {
+  const handleCardClick = (index: number) => {
     setActiveIndex(index);
     cardRefs.current[index]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
