@@ -1,7 +1,7 @@
 "use client"
-import  React, { useRef }  from 'react';
+import React, { useRef } from 'react';
 
-export default function RightSideBox({  }) {
+export default function RightSideBox({ }) {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
   const [activeIndex, setActiveIndex] = React.useState(0);
 
@@ -105,7 +105,7 @@ export default function RightSideBox({  }) {
     },
   ];
 
-  
+
 
   React.useEffect(() => {
     cardRefs.current = cardRefs.current.slice(0, cards.length);
@@ -115,7 +115,7 @@ export default function RightSideBox({  }) {
     setActiveIndex(index);
     cardRefs.current[index]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
-  
+
 
   const handleCardClick = (index: number) => {
     setActiveIndex(index);
@@ -124,44 +124,44 @@ export default function RightSideBox({  }) {
 
   return (
     <div className="flex flex-row items-start px-4 py-10 space-x-4">
-      
+
       {/* Dot navigation - now on the left side */}
-     
+
 
       {/* Cards */}
       <div className="flex flex-col space-y-8 w-full max-w-3xl">
-      
-      {cards.map((card, index) => {
-  const { borderColor, bgColor } = card;
-  return (
-    <div
-    key={card.id}
-    ref={(el) => {
-      cardRefs.current[index] = el;
-    }}
-    onClick={() => handleCardClick(index)}
-    className="cursor-pointer rounded-[28px] p-5 border-b backdrop-blur-sm shadow-[0_0_5px_0_#A29DBB] w-full"
-    style={{ backgroundColor: bgColor, borderBottom: `4px solid ${borderColor}` }}
-  >
-  
-      <div className="mb-4">
-        <span className="text-[#FFFFFF] font-medium text-sm md:text-base leading-[140%] tracking-[0.01em] font-heleveticaNeue block">
-          {card.category}
-        </span>
-        <span className="text-[#FFFFFF] font-bold text-xl md:text-2xl leading-[140%] tracking-[0.01em] font-helvetica block mt-1">
-          {card.title}
-        </span>
-        <span
-          className="text-white font-bold text-base md:text-lg leading-[140%] tracking-[0.01em] font-helvetica mt-2"
-          dangerouslySetInnerHTML={{ __html: card.semititle }}
-        />
-        <p className="text-white font-normal text-sm md:text-base leading-[140%] tracking-[0.01em] font-heleveticaNeue whitespace-pre-line mt-2">
-          {card.description}
-        </p>
-      </div>
-    </div>
-  );
-})}
+
+        {cards.map((card, index) => {
+          const { borderColor, bgColor } = card;
+          return (
+            <div
+              key={card.id}
+              ref={(el) => {
+                cardRefs.current[index] = el;
+              }}
+              onClick={() => handleCardClick(index)}
+              className="cursor-pointer rounded-[28px] p-5 border-b backdrop-blur-sm shadow-[0_0_5px_0_#A29DBB] w-full scroll-mt-43"
+              style={{ backgroundColor: bgColor, borderBottom: `4px solid ${borderColor}` }}
+            >
+
+              <div className="mb-4">
+                <span className="text-[#FFFFFF] font-medium text-sm md:text-base leading-[140%] tracking-[0.01em] font-heleveticaNeue block">
+                  {card.category}
+                </span>
+                <span className="text-[#FFFFFF] font-bold text-xl md:text-2xl leading-[140%] tracking-[0.01em] font-helvetica block mt-1">
+                  {card.title}
+                </span>
+                <span
+                  className="text-white font-bold text-base md:text-lg leading-[140%] tracking-[0.01em] font-helvetica mt-2"
+                  dangerouslySetInnerHTML={{ __html: card.semititle }}
+                />
+                <p className="text-white font-normal text-sm md:text-base leading-[140%] tracking-[0.01em] font-heleveticaNeue whitespace-pre-line mt-2">
+                  {card.description}
+                </p>
+              </div>
+            </div>
+          );
+        })}
 
       </div>
       <div className="sticky top-60 self-start z-50 flex flex-col items-center space-y-4">
@@ -169,9 +169,8 @@ export default function RightSideBox({  }) {
           <button
             key={card.id}
             onClick={() => handleDotClick(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none ${
-              index === activeIndex ? 'bg-[#674EA7] scale-125' : 'bg-gray-300'
-            }`}
+            className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none ${index === activeIndex ? 'bg-[#674EA7] scale-125' : 'bg-gray-300'
+              }`}
             aria-label={`Go to ${card.title}`}
           />
         ))}
