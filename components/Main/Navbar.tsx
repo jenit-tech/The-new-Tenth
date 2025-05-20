@@ -111,9 +111,10 @@ const Navbar = () => {
               placeholder="Enter Your Email"
               className="w-full border-gray-300 focus:border-purple-500 focus:ring-purple-500"
             />
-            <button className="w-full bg-purple-800 hover:bg-purple-700 px-4 py-2 rounded-lg text-white">
-              Let's Talk
-            </button>
+           <button className="w-full bg-purple-800 hover:bg-purple-700 px-4 py-2 rounded-lg text-white">
+  Let&apos;s Talk
+</button>
+
           </div>
         </div>
       </div>
