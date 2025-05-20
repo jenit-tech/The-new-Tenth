@@ -135,14 +135,15 @@ export default function RightSideBox({  }) {
   const { borderColor, bgColor } = card;
   return (
     <div
-      key={card.id}
-      ref={(el) => {
-        cardRefs.current[index] = el;
-      }}
-      onClick={() => handleCardClick(index)}
-      className={`cursor-pointer rounded-[28px] p-5 border-b bg-[${bgColor}] backdrop-blur-sm shadow-[0_0_5px_0_#A29DBB] w-full`}
-      style={{ borderBottom: `4px solid ${borderColor}` }}
-    >
+    key={card.id}
+    ref={(el) => {
+      cardRefs.current[index] = el;
+    }}
+    onClick={() => handleCardClick(index)}
+    className="cursor-pointer rounded-[28px] p-5 border-b backdrop-blur-sm shadow-[0_0_5px_0_#A29DBB] w-full"
+    style={{ backgroundColor: bgColor, borderBottom: `4px solid ${borderColor}` }}
+  >
+  
       <div className="mb-4">
         <span className="text-[#FFFFFF] font-medium text-sm md:text-base leading-[140%] tracking-[0.01em] font-heleveticaNeue block">
           {card.category}
