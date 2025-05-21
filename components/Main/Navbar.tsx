@@ -12,9 +12,9 @@ const Navbar = () => {
   const [hoveredButton3, setHoveredButton3] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 w-full flex items-center justify-between h-[144px] px-5 md:px-20  py-3 bg-[#F2F0FA]  z-50 ">
+    <nav className="fixed top-0 left-0 right-0 w-full flex items-center justify-between h-[70px] md:h-[144px] px-9 md:px-14  py-3 bg-[#F2F0FA]  z-50 ">
       {/* Logo Image */}
-      <Image src="/logo.png" alt="Description" width={120} height={120} />
+      <Image src="/logo.png" alt="Description" width={120} height={120} className="w-13 md:w-[120px]" />
 
       {/* Desktop & Tablet Menu */}
     
@@ -127,7 +127,7 @@ const Navbar = () => {
       placeholder:text-[#570B974D]
       placeholder:font-roboto placeholder:text-base placeholder:font-medium
       placeholder:tracking-wide placeholder:leading-relaxed
-      text-[#674EA7] /* Set the input text color here */
+      text-[#2E2C32] /* Set the input text color here */
     "
   />
   <button
@@ -187,11 +187,12 @@ const Navbar = () => {
 
           {/* Contact form in mobile menu */}
           <div className="pt-4 space-y-4">
-            <input
-              type="email"
-              placeholder="Enter Your Email"
-              className="w-full border-gray-300 focus:border-purple-500 focus:ring-purple-500"
-            />
+          <input
+  type="email"
+  placeholder="Enter Your Email"
+  className="w-full px-4 py-2 text-base text-[#2E2C32] placeholder-[#A29DBB] border border-purple-500 rounded-[8px] focus:outline-none focus:ring-2 focus:ring-purple-500"
+/>
+
            <button className="w-full bg-purple-800 hover:bg-purple-700 px-4 py-2 rounded-lg text-white">
   Let&apos;s Talk
 </button>

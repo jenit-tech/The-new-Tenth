@@ -18,7 +18,7 @@ const AboutUs = () => {
           </div>
 
           {/* Right Section */}
-          <div className="w-full lg:w-1/2 p-0 md:p-10">
+          <div className="w-full lg:w-1/2 p-0 md:p-10 px-5">
             <AboutUsRightSection />
           </div>
         </div>

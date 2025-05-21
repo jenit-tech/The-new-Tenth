@@ -3,14 +3,15 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className="w-fit gap-[28px] px-[80px] py-[40px] bg-white mt-5">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+    <div className="px-9 md:px-14  py-[40px] bg-white mt-5">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
         <div className="md:col-span-2">
 
           <Image
             src="/logo.png"
             alt="Description"
             width={92} height={92}
+            className="w-12 md:w-[70px]"
 
           />
 
@@ -18,10 +19,10 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col md:col-span-2">
-          <a href="#company-section" className="font-roboto p-3 font-normal text-[14px]  md:text-[16px] leading-[100%] tracking-[0%] text-[#570B97]">
+          <a href="#company-section" className="font-roboto py-1 md:p-3 font-normal text-[14px]  md:text-[16px] leading-[100%] tracking-[0%] text-[#570B97]">
             Our Client
           </a>
-          <a href="#about" className="font-roboto font-normal p-3 text-[14px]  md:text-[16px] leading-[100%] tracking-[0%] text-[#570B97]">
+          <a href="#about" className="font-roboto font-normal py-1 md:p-3 text-[14px]  md:text-[16px] leading-[100%] tracking-[0%] text-[#570B97]">
             About Us
           </a>
 
@@ -51,7 +52,7 @@ const Footer = () => {
                           placeholder:text-[#570B974D]
                           placeholder:font-roboto placeholder:text-base placeholder:font-medium
                           placeholder:tracking-wide placeholder:leading-relaxed
-                          text-[#674EA7] /* Set the input text color here */
+                          text-[#2E2C32] /* Set the input text color here */
                         "
                       />
                         <button
@@ -68,11 +69,11 @@ const Footer = () => {
                       </div>
                     </div>
                     <div className="block md:hidden pt-4 space-y-4">
-                      <input
-                        type="email"
-                        placeholder="Enter Your Email"
-                        className="w-full border-gray-300 focus:border-purple-500 focus:ring-purple-500 px-4 py-2 rounded-lg"
-                      />
+                    <input
+  type="email"
+  placeholder="Enter Your Email"
+  className="w-full px-4 py-2 text-base text-[#2E2C32] placeholder-[#A29DBB] border border-purple-500 rounded-[8px] focus:outline-none focus:ring-2 focus:ring-purple-500"
+/>
                       <button className="w-full bg-[#570B97] hover:bg-[#570B97] px-4 py-2 rounded-lg text-white">
                       Let&rsquo;s Talk
                       </button>
@@ -82,12 +83,12 @@ const Footer = () => {
       </div>
 
       <div>
-        <hr className="w-full h-0.5 bg-gradient-to-r from-purple-700/25 via-purple-700/40 to-purple-700/25 border-0 my-5" />
-        <div className="flex flex-col md:flex-row justify-between items-center w-full px-4">
+        <hr className="w-full h-0.5 bg-gradient-to-r from-purple-700/25 via-purple-700/40 to-purple-700/25 border-0 my-3 md:my-5 " />
+        <div className="flex flex-col  md:flex-row  md:justify-between items-start md:items-center w-full px-0 md:px-4">
           <p className="font-roboto font-normal text-[14px]  md:text-[16px] leading-[140%] tracking-[0.01em] align-middle text-[#570B97] mb-2 md:mb-0">
             © 2025 The Tenth Floor Pte Ltd. All rights reserved.
           </p>
-          <p className="font-roboto font-normal text-[14px]  md:text-[16px] leading-[140%] tracking-[0.01em] align-middle text-[#570B97] hover:underline">
+          <p className="font-roboto font-normal text-[14px]  md:text-[16px] leading-[140%] tracking-[0.01em] align-middle text-[#570B97] hover:underline ">
             Privacy Policy
           </p>
         </div>

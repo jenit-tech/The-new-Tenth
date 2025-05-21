@@ -5,7 +5,7 @@ const Company = () => {
   return (
     <div id="company-section" className=" pt-36 md: pt-50  bg-gradient-to-b from-purple-50 via-white to-purple-50 ">
     
-    <div className="px-5 md:px-10 flex flex-col lg:flex-row justify-center items-center">
+    <div className="px-5 md:px-10 flex flex-col lg:flex-row lg:justify-center lg:items-center">
 
       
       {/* Left Content */}

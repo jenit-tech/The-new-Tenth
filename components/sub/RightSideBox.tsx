@@ -106,9 +106,34 @@ export default function RightSideBox() {
     },
   ];
 
-  useEffect(() => {
-    cardRefs.current = cardRefs.current.slice(0, cards.length)
-  }, [cards.length])
+  // Step 1: Ensure refs array matches cards length
+useEffect(() => {
+  cardRefs.current = cardRefs.current.slice(0, cards.length);
+}, [cards.length]);
+
+// Step 2: Set up intersection observers
+useEffect(() => {
+  const observers: IntersectionObserver[] = [];
+
+  cardRefs.current.forEach((ref, index) => {
+    if (ref) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setActiveIndex(index);
+          }
+        },
+        { threshold: 0.5 }
+      );
+      observer.observe(ref);
+      observers.push(observer);
+    }
+  });
+
+  return () => {
+    observers.forEach((observer) => observer.disconnect());
+  };
+}, [cards.length]);
 
   const handleDotClick = (index: number) => {
     setActiveIndex(index)
@@ -121,12 +146,13 @@ export default function RightSideBox() {
   }
 
   return (
-    <div className="flex flex-row items-start px-4 py-2 space-x-4">
+    <div className="flex flex-row items-start px-4 py-2 space-x-4 z-10">
 
       {/* Cards */}
       <div className="flex flex-col space-y-8 w-full max-w-3xl">
         {cards.map((card, index) => {
           const { borderColor, bgColor } = card
+          const isActive = activeCardIndex === index;
           return (
             <div
               key={card.id}
@@ -156,15 +182,7 @@ export default function RightSideBox() {
                 <p className="text-white font-normal text-[13px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue whitespace-pre-line mt-2">
                   {card.description}
                 </p>
-                <button
-                  className="flex items-center space-x-1 mt-2 cursor-pointer"
-                  onClick={() => setActiveCardIndex(index)}
-                >
-                  <span className="text-white font-medium text-[13px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue">
-                    Read More
-                  </span>
-                  <Image src="/arrow-up-right.png" alt="Description" width={18} height={18} />
-                </button>
+              
               </div>
               {activeCardIndex === index && (
                 <div className="mt-4 relative"> {/* Make container relative for absolute positioning */}
@@ -177,65 +195,85 @@ export default function RightSideBox() {
                     ✖
                   </button>
                   {/* Inner box with padding to prevent touching the close button or paragraph */}
-                  <div className="rounded-[8px] p-4 bg-white shadow-[0_0_5px_0_#A29DBB]">
-                    {/* Paragraph with margin bottom to create space from the next content */}
-                    <p className="font-rubik font-medium text-[16px] md:text-[20px] leading-[140%] tracking-[0.01em] text-center align-middle text-[#2E2C32B2] mb-4">
-                      To receive this case study please enter your email Address
-                    </p>
-                    {/* Large screen version (from md breakpoint and up) */}
-                    <div className="hidden md:block md:w-[500px]">
-                      <div className="relative flex-1 max-w-lg mt-4">
-                        <input
-                          id="email"
-                          type="text"
-                          placeholder="Enter Your Email"
-                          className="
-                          w-full h-11 px-5 rounded-[18px] border-b border-white
-                          shadow-[0_0_4px_0_rgba(0,0,0,0.25)]
-                          bg-transparent outline-none pr-32
-                          placeholder:text-[#570B974D]
-                          placeholder:font-roboto placeholder:text-base placeholder:font-medium
-                          placeholder:tracking-wide placeholder:leading-relaxed
-                          text-[#674EA7] /* Set the input text color here */
-                        "
-                      />
-                        <button
-                          type="button"
-                          className="
-        absolute top-0 right-0 h-11 w-28 rounded-tr-[18px] rounded-br-[18px]
-        bg-[#9B87F5] flex items-center justify-center
-      "
-                        >
-                          <span className="font-roboto text-[12px] md:text-[16px] leading-6 text-[#FAFAFA] text-center align-middle">
-                            Submit
-                          </span>
-                        </button>
-                      </div>
-                    </div>
+                  <div className="relative rounded-[8px] p-4 shadow-[0_0_5px_0_#A29DBB] max-w-2xl mx-auto">
+      {/* Background layer */}
+      <div className="absolute inset-0 bg-[rgba(255,255,255,0.6)] z-0 rounded-[8px]" />
 
-                    {/* Mobile version (below md breakpoint) */}
-                    <div className="block md:hidden pt-4 space-y-4">
-                      <input
-                        type="email"
-                        placeholder="Enter Your Email"
-                        className="w-full border-gray-300 focus:border-purple-500 focus:ring-purple-500 px-4 py-2 rounded-lg"
-                      />
-                      <button className="w-full bg-[#570B97] hover:bg-[#570B97] px-4 py-2 rounded-lg text-white">
-                      Let&rsquo;s Talk
-                      </button>
-                    </div>
+      {/* Content layer */}
+      <div className="relative z-10">
+        {/* Paragraph */}
+        <p className="font-rubik font-medium text-[13px] md:text-[16px] leading-[140%] tracking-[0.01em] text-center text-[#2E2C32B2] mb-4">
+          To receive this case study please enter your email Address
+        </p>
 
+        {/* Large screen form (from md breakpoint) */}
+        <div className="hidden md:block md:w-[500px] mx-auto">
+          <div className="relative flex-1 max-w-lg mt-4">
+            {/* Email Input */}
+            <input
+              id="email"
+              type="text"
+              placeholder="Enter Your Email"
+              className="
+                w-full h-11 px-5 rounded-[18px] border-b border-white
+                shadow-[0_0_4px_0_rgba(0,0,0,0.25)]
+                bg-white outline-none pr-32
+                placeholder:text-[#2E2C324D]
+                font-roboto font-medium text-[16px]
+              "
+            />
+            {/* Submit Button */}
+            <button
+              type="button"
+              className="
+                absolute top-0 right-0 h-11 w-28 rounded-tr-[18px] rounded-br-[18px]
+                bg-[#9B87F5] flex items-center justify-center
+              "
+            >
+              <span className="font-roboto text-[12px] md:text-[16px] leading-6 text-[#FAFAFA] text-center align-middle">
+                Submit
+              </span>
+            </button>
+          </div>
+        </div>
 
-                    {/* Additional message with margin top to ensure spacing */}
-                    <div className="flex items-center mt-4">
-                      <Image src="/layer.png" alt="Description" width={16} height={16} />
-                      <p className="font-rubik font-normal text-[12px] md:text-[16px] leading-[140%] tracking-[0.01em] bg-[] text-[#3A3A3A] px-4 py-2 rounded-[8px] ml-2">
-                        The case study will be shared within 24 hours
-                      </p>
-                    </div>
-                  </div>
+        {/* Mobile version (below md) */}
+        <div className="block md:hidden pt-4 space-y-4 max-w-md mx-auto">
+          <input
+            type="email"
+            placeholder="Enter Your Email"
+            className="w-full border-gray-300 focus:border-purple-500 focus:ring-purple-500 px-4 py-2 rounded-lg bg-white"
+          />
+          <button className="w-full bg-[#570B97] hover:bg-[#570B97] px-4 py-2 rounded-lg text-white">
+            Let’s Talk
+          </button>
+        </div>
+
+        {/* Additional message with icon */}
+        <div className="flex items-center mt-4 px-4">
+          <Image src="/layer.png" alt="Description" width={16} height={16} />
+          <p className="font-rubik font-normal text-[11px] md:text-[15px] leading-[140%] tracking-[0.01em] text-[#3A3A3A] px-4 py-2 rounded-[8px] ml-2">
+            The case study will be shared within 24 hours
+          </p>
+        </div>
+      </div>
+    </div>
+   
                 </div>
               )}
+            <button
+  className="flex items-center space-x-1 mt-2 cursor-pointer"
+  onClick={() => setActiveCardIndex(isActive ? null : index)}
+>
+  <span
+    className={`font-medium text-[13px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue ${
+      isActive ? 'text-[#2E2C32B2]' : 'text-white'
+    }`}
+  >
+    {isActive ? 'Read Less' : 'Read More'}
+  </span>
+  <Image src="/arrow-up-right.png" alt="Description" width={18} height={18} />
+</button>
             </div>
           )
         })}
@@ -258,7 +296,7 @@ export default function RightSideBox() {
               key={card.id}
               onClick={() => handleDotClick(index)}
               style={style}
-              className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none ${isActive ? 'scale-125' : ''
+              className={`w-2 h-2 rounded-full transition-all duration-300 focus:outline-none ${isActive ? 'scale-125' : ''
                 }`}
               aria-label={`Go to ${card.title}`}
             />
