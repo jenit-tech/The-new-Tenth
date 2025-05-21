@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const RightSideDataTraining = () => {
@@ -5,11 +6,12 @@ const RightSideDataTraining = () => {
     <div className="w-full">
       <div className="rounded-[28px] p-5 border-b bg-[#361C75]">
         <div className="mb-4">
-          <div className="font-sans font-normal text-white text-base leading-[140%] tracking-[0.01em]">
+          <div className="font-sans text-[13px] md:text-[16px] text-white text-base leading-[140%] tracking-[0.01em]">
             <p>
               At The Tenth Floor, we believe digital is just human behavior captured in data. Our training is designed to help you uncover meaning in that behavior, then act on it with clarity and confidence.
+              This is not a course in tools. It’s a way of thinking.
             </p>
-            <p>This is not a course in tools. It’s a way of thinking.</p>
+          
             <br/>
             <p>
               You’ll learn how to investigate real-world business problems using live data, unearth human motivations beneath the noise, and make insight-led decisions that create impact.
@@ -22,9 +24,14 @@ const RightSideDataTraining = () => {
             <br/>
           </div>
 
-          <span className="font-helveticaNeue text-[17px] leading-[1.4] tracking-[0.01em] text-white">
+          <div className="flex items-center space-x-1 mt-2">
+          <span className="text-white font-medium text-[13px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue">
             Read More
           </span>
+          <button>
+            <Image src="/arrow-up-right.png" alt="Description" width={18} height={18} />
+          </button>
+        </div>
         </div>
       </div>
     </div>

@@ -3,29 +3,27 @@ import AboutUsRightSection from '../sub/AboutUsRightSection' // Adjust path as n
 
 const AboutUs = () => {
   return (
-    <div className="pt-36 pr-20 bg-gradient-to-b from-purple-50 via-white to-purple-50">
-      <div className="container">
-        <div className=" mx-auto px-4 md:px-8 py-12 md:py-20 relative top-[20px] left-[40px] gap-[10px] flex flex-col lg:flex-row  lg:gap-16 pb-10">
-          
-          {/* Left Content */}
-          <div className="w-full lg:w-1/2 mb-10 lg:mt-10">
-            <div className="sticky top-50">
-              <h2 className="font-heleveticaNeue font-bold text-[2rem] md:text-[2.5rem] leading-[1.2] tracking-[0.01em] align-middle text-[#570B97] whitespace-pre-line">
-                Founded in 2015 in Singapore, The Tenth Floor is driven by a team of professionals with expertise across a wide range of industries.
-              </h2>
-              <p className="font-heleveticaNeue font-normal text-[1rem] md:text-[1.125rem] leading-[1.4] tracking-[0.01em] text-[#570B97] mt-4 whitespace-pre-line">
-                This distinctive blend and collaborative approach enable us to view data from various angles, uncover valuable insights, and convert complex information into innovative and clear business solutions.
-              </p>
+    <div id="about" className=" pt-36 md: pt-50  bg-gradient-to-b from-purple-50 via-white to-purple-50 ">
+    
+       <div className="px-5 md:px-10 flex flex-col lg:flex-row  pb-30">
+         
+         {/* Left Content */}
+         <div className="w-full lg:w-1/2 m-5">
+         <div className="sticky top-50">
+              <h2 className="font-heleveticaNeue font-bold text-[28px] md:text-[32px] leading-[1.2] tracking-[0.01em] align-middle text-[#570B97] whitespace-pre-line">
+              Established in 2015 in Singapore, The Tenth Floor is led by professionals who bring experience form diverse fields. </h2>
+              <p className="font-heleveticaNeue font-normal text-[13px] md:text-[16px] leading-[1.4] tracking-[0.01em] text-[#570B97] mt-4 whitespace-pre-line">
+              It is this unique mix and collaborative thinking that allows us to see data from multiple perspectives, uncover insights and transform complex information into creative yet clear business solutions.  </p>
             </div>
           </div>
 
           {/* Right Section */}
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 p-0 md:p-10">
             <AboutUsRightSection />
           </div>
         </div>
       </div>
-    </div>
+  
   )
 }
 

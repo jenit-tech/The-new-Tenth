@@ -43,7 +43,7 @@ const CompanyRightSection = () => {
   }
 
   return (
-    <div className="w-full  px-4 py-8">
+    <div className="w-full  px-4 py-8 ">
       <div ref={emblaRef} className="overflow-hidden w-full">
         <div className="flex select-none">
           {groupedLogos.map((group, index) => (
@@ -81,7 +81,7 @@ const CompanyRightSection = () => {
             onClick={() => scrollTo(index)}
             className={cn(
               "h-3 w-3 rounded-full transition-colors duration-200",
-              selectedIndex === index ? "bg-black" : "bg-gray-300"
+              selectedIndex === index ? "bg-[#674EA7]" : "bg-[#B4A7D5] border border-[#570B97]"
             )}
             aria-label={`Go to slide ${index + 1}`}
           />

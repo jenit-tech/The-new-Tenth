@@ -1,10 +1,11 @@
 "use client"
-import React, { useRef } from 'react';
+import Image from 'next/image'
+import React, { useRef, useState, useEffect } from 'react'
 
-export default function RightSideBox({ }) {
+export default function RightSideBox() {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
-  const [activeIndex, setActiveIndex] = React.useState(0);
-
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [activeCardIndex, setActiveCardIndex] = useState<number | null>(null);
   const cards = [
     {
       id: 1,
@@ -105,76 +106,165 @@ export default function RightSideBox({ }) {
     },
   ];
 
-
-
-  React.useEffect(() => {
-    cardRefs.current = cardRefs.current.slice(0, cards.length);
-  }, [cards.length]);
+  useEffect(() => {
+    cardRefs.current = cardRefs.current.slice(0, cards.length)
+  }, [cards.length])
 
   const handleDotClick = (index: number) => {
-    setActiveIndex(index);
-    cardRefs.current[index]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
-
+    setActiveIndex(index)
+    cardRefs.current[index]?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 
   const handleCardClick = (index: number) => {
-    setActiveIndex(index);
-    cardRefs.current[index]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
+    setActiveIndex(index)
+    cardRefs.current[index]?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 
   return (
-    <div className="flex flex-row items-start px-4 py-10 space-x-4">
-
-      {/* Dot navigation - now on the left side */}
-
+    <div className="flex flex-row items-start px-4 py-2 space-x-4">
 
       {/* Cards */}
       <div className="flex flex-col space-y-8 w-full max-w-3xl">
-
         {cards.map((card, index) => {
-          const { borderColor, bgColor } = card;
+          const { borderColor, bgColor } = card
           return (
             <div
               key={card.id}
               ref={(el) => {
                 cardRefs.current[index] = el;
               }}
+
               onClick={() => handleCardClick(index)}
               className="cursor-pointer rounded-[28px] p-5 border-b backdrop-blur-sm shadow-[0_0_5px_0_#A29DBB] w-full scroll-mt-43"
-              style={{ backgroundColor: bgColor, borderBottom: `4px solid ${borderColor}` }}
+              style={{
+                backgroundColor: bgColor, // keep transparent for content visibility
+                borderBottom: `4px solid ${borderColor}`,
+              }}
             >
-
+              {/* Card Content */}
               <div className="mb-4">
-                <span className="text-[#FFFFFF] font-medium text-sm md:text-base leading-[140%] tracking-[0.01em] font-heleveticaNeue block">
+                <span className="text-[#FFFFFF] font-medium text-[13px] md:text-[13px] leading-[140%] tracking-[0.01em] font-heleveticaNeue block">
                   {card.category}
                 </span>
-                <span className="text-[#FFFFFF] font-bold text-xl md:text-2xl leading-[140%] tracking-[0.01em] font-helvetica block mt-1">
+                <span className="text-[#FFFFFF] font-bold text-[20px] md:text-[24px] leading-[140%] tracking-[0.01em] font-helvetica block mt-1">
                   {card.title}
                 </span>
                 <span
-                  className="text-white font-bold text-base md:text-lg leading-[140%] tracking-[0.01em] font-helvetica mt-2"
+                  className="text-white font-bold text-[20px] md:text-[24px] leading-[140%] tracking-[0.01em] font-helvetica mt-2"
                   dangerouslySetInnerHTML={{ __html: card.semititle }}
                 />
-                <p className="text-white font-normal text-sm md:text-base leading-[140%] tracking-[0.01em] font-heleveticaNeue whitespace-pre-line mt-2">
+                <p className="text-white font-normal text-[13px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue whitespace-pre-line mt-2">
                   {card.description}
                 </p>
+                <button
+                  className="flex items-center space-x-1 mt-2 cursor-pointer"
+                  onClick={() => setActiveCardIndex(index)}
+                >
+                  <span className="text-white font-medium text-[13px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue">
+                    Read More
+                  </span>
+                  <Image src="/arrow-up-right.png" alt="Description" width={18} height={18} />
+                </button>
               </div>
+              {activeCardIndex === index && (
+                <div className="mt-4 relative"> {/* Make container relative for absolute positioning */}
+                  {/* Close Button */}
+                  <button
+                    onClick={() => setActiveCardIndex(null)} // Or your close handler
+                    className="absolute top-2 right-2 z-10 text-gray-500 hover:text-gray-700 focus:outline-none"
+                    aria-label="Close"
+                  >
+                    ✖
+                  </button>
+                  {/* Inner box with padding to prevent touching the close button or paragraph */}
+                  <div className="rounded-[8px] p-4 bg-white shadow-[0_0_5px_0_#A29DBB]">
+                    {/* Paragraph with margin bottom to create space from the next content */}
+                    <p className="font-rubik font-medium text-[16px] md:text-[20px] leading-[140%] tracking-[0.01em] text-center align-middle text-[#2E2C32B2] mb-4">
+                      To receive this case study please enter your email Address
+                    </p>
+                    {/* Large screen version (from md breakpoint and up) */}
+                    <div className="hidden md:block md:w-[500px]">
+                      <div className="relative flex-1 max-w-lg mt-4">
+                        <input
+                          id="email"
+                          type="text"
+                          placeholder="Enter Your Email"
+                          className="
+                          w-full h-11 px-5 rounded-[18px] border-b border-white
+                          shadow-[0_0_4px_0_rgba(0,0,0,0.25)]
+                          bg-transparent outline-none pr-32
+                          placeholder:text-[#570B974D]
+                          placeholder:font-roboto placeholder:text-base placeholder:font-medium
+                          placeholder:tracking-wide placeholder:leading-relaxed
+                          text-[#674EA7] /* Set the input text color here */
+                        "
+                      />
+                        <button
+                          type="button"
+                          className="
+        absolute top-0 right-0 h-11 w-28 rounded-tr-[18px] rounded-br-[18px]
+        bg-[#9B87F5] flex items-center justify-center
+      "
+                        >
+                          <span className="font-roboto text-[12px] md:text-[16px] leading-6 text-[#FAFAFA] text-center align-middle">
+                            Submit
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Mobile version (below md breakpoint) */}
+                    <div className="block md:hidden pt-4 space-y-4">
+                      <input
+                        type="email"
+                        placeholder="Enter Your Email"
+                        className="w-full border-gray-300 focus:border-purple-500 focus:ring-purple-500 px-4 py-2 rounded-lg"
+                      />
+                      <button className="w-full bg-[#570B97] hover:bg-[#570B97] px-4 py-2 rounded-lg text-white">
+                        Let's Talk
+                      </button>
+                    </div>
+
+
+                    {/* Additional message with margin top to ensure spacing */}
+                    <div className="flex items-center mt-4">
+                      <Image src="/layer.png" alt="Description" width={16} height={16} />
+                      <p className="font-rubik font-normal text-[12px] md:text-[16px] leading-[140%] tracking-[0.01em] bg-[] text-[#3A3A3A] px-4 py-2 rounded-[8px] ml-2">
+                        The case study will be shared within 24 hours
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
-          );
+          )
         })}
 
       </div>
-      <div className="sticky top-60 self-start z-50 flex flex-col items-center space-y-4">
-        {cards.map((card, index) => (
-          <button
-            key={card.id}
-            onClick={() => handleDotClick(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none ${index === activeIndex ? 'bg-[#674EA7] scale-125' : 'bg-gray-300'
-              }`}
-            aria-label={`Go to ${card.title}`}
-          />
-        ))}
+
+
+
+      {/* Dots */}
+      <div className="sticky top-[200px] self-start z-50 flex flex-col items-center space-y-4">
+        {cards.map((card, index) => {
+          const isActive = index === activeIndex;
+          const style = {
+            backgroundColor: isActive ? card.bgColor : '#B4A7D5', // inactive dots background color
+            border: isActive ? 'none' : '1px solid #570B97', // optional border for inactive dots
+          };
+
+          return (
+            <button
+              key={card.id}
+              onClick={() => handleDotClick(index)}
+              style={style}
+              className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none ${isActive ? 'scale-125' : ''
+                }`}
+              aria-label={`Go to ${card.title}`}
+            />
+          );
+        })}
       </div>
     </div>
-  );
+  )
 }

@@ -7,66 +7,147 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const toggleMenu = () => setMobileMenuOpen(!mobileMenuOpen)
+  const [hoveredButton1, setHoveredButton1] = useState(false);
+  const [hoveredButton2, setHoveredButton2] = useState(false);
+  const [hoveredButton3, setHoveredButton3] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 w-full flex items-center justify-between h-36 px-20 py-3 bg-[#F2F0FA]  z-50 ">
+    <nav className="fixed top-0 left-0 right-0 w-full flex items-center justify-between h-[144px] px-5 md:px-20  py-3 bg-[#F2F0FA]  z-50 ">
       {/* Logo Image */}
       <Image src="/logo.png" alt="Description" width={120} height={120} />
 
       {/* Desktop & Tablet Menu */}
-      <div className="hidden md:flex items-center justify-center flex-1 max-w-4xl space-x-8 ">
-        {/* Buttons */}
-        <div className="flex space-x-2">
-          <button className="py-1 px-2 rounded-[33px]">
-            <span className="font-roboto text-[17px] font-medium text-[#570B97] capitalize">
+    
+    <div className="hidden md:flex items-center justify-center flex-1 max-w-4xl space-x-8">
+      
+      {/* Button 1 */}
+      <div className="flex space-x-2">
+        <button
+          className="py-1 px-2 rounded-[33px]"
+          onMouseEnter={() => setHoveredButton1(true)}
+          onMouseLeave={() => setHoveredButton1(false)}
+        >
+          <a
+            href="#company-section"
+            className="font-roboto text-[17px] font-medium text-[#570B97] capitalize relative inline-block"
+          >
+            <span
+              style={{
+                opacity: hoveredButton1 ? 0 : 1,
+                whiteSpace: 'nowrap', // ensure single line
+              }}
+            >
               Our Clients
             </span>
-          </button>
-          <button className="py-1 px-3 rounded-[33px]">
-            <span className="font-roboto text-[17px] font-medium text-[#570B97] capitalize">
+            <span
+              className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 ease-in-out"
+              style={{
+                opacity: hoveredButton1 ? 1 : 0,
+              }}
+            >
+              Home
+            </span>
+          </a>
+        </button>
+      </div>
+
+      {/* Button 2 */}
+      <div className="flex space-x-2">
+        <button
+          className="py-1 px-2 rounded-[33px]"
+          onMouseEnter={() => setHoveredButton2(true)}
+          onMouseLeave={() => setHoveredButton2(false)}
+        >
+          <a
+            href="#company-section"
+            className="font-roboto text-[17px] font-medium text-[#570B97] capitalize relative inline-block"
+          >
+            <span
+              style={{
+                opacity: hoveredButton2 ? 0 : 1,
+                whiteSpace: 'nowrap',
+              }}
+            >
               Training
             </span>
-          </button>
-          <button className="py-3 px-2 rounded-[33px]">
-            <span className="font-roboto text-[17px] font-medium text-[#570B97] capitalize">
+            <span
+              className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 ease-in-out"
+              style={{
+                opacity: hoveredButton2 ? 1 : 0,
+              }}
+            >
+              Home
+            </span>
+          </a>
+        </button>
+      </div>
+
+      {/* Button 3 */}
+      <div className="flex space-x-2">
+        <button
+          className="py-1 px-2 rounded-[33px]"
+          onMouseEnter={() => setHoveredButton3(true)}
+          onMouseLeave={() => setHoveredButton3(false)}
+        >
+          <a
+            href="#company-section"
+            className="font-roboto text-[17px] font-medium text-[#570B97] capitalize relative inline-block"
+          >
+            <span
+              style={{
+                opacity: hoveredButton3 ? 0 : 1,
+                whiteSpace: 'nowrap',
+              }}
+            >
               About Us
             </span>
-          </button>
-        </div>
+            <span
+              className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 ease-in-out"
+              style={{
+                opacity: hoveredButton3 ? 1 : 0,
+              }}
+            >
+              Home
+            </span>
+          </a>
+        </button>
+      </div>
+
 
         {/* Email Input & Button */}
         <div className="relative flex-1 max-w-lg">
-          <input
-            id="email"
-            type="text"
-            placeholder="Enter Your Email"
-            className="
-              w-full h-11 px-5 rounded-[18px] border-b border-white
-              text-white shadow-[0_0_4px_0_rgba(0,0,0,0.25)]
-              bg-transparent outline-none pr-32
-              placeholder:text-[#570B974D]
-              placeholder:font-roboto placeholder:text-base placeholder:font-medium
-              placeholder:tracking-wide placeholder:leading-relaxed
-            "
-          />
-          <button
-            type="button"
-            className="
-              absolute top-0 right-0 h-11 w-28 rounded-tr-[18px] rounded-br-[18px]
-              bg-[#570B97] flex items-center justify-center
-            "
-          >
-            <span
-              className="
-                font-roboto font-medium text-base leading-6
-                text-[#FAFAFA]
-                text-center align-middle
-              "
-            >
-              Let’s Talk
-            </span>
-          </button>
-        </div>
+  <input
+    id="email"
+    type="text"
+    placeholder="Enter Your Email"
+    className="
+      w-full h-11 px-5 rounded-[18px] border-b border-white
+      shadow-[0_0_4px_0_rgba(0,0,0,0.25)]
+      bg-transparent outline-none pr-32
+      placeholder:text-[#570B974D]
+      placeholder:font-roboto placeholder:text-base placeholder:font-medium
+      placeholder:tracking-wide placeholder:leading-relaxed
+      text-[#674EA7] /* Set the input text color here */
+    "
+  />
+  <button
+    type="button"
+    className="
+      absolute top-0 right-0 h-11 w-28 rounded-tr-[18px] rounded-br-[18px]
+      bg-[#570B97] flex items-center justify-center
+    "
+  >
+    <span
+      className="
+        font-roboto font-medium text-base leading-6
+        text-[#FAFAFA]
+        text-center align-middle
+      "
+    >
+      Let’s Talk
+    </span>
+  </button>
+</div>
       </div>
 
       {/* Mobile Hamburger Button */}
@@ -123,3 +204,11 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+
+
+
+
+
+  
+
