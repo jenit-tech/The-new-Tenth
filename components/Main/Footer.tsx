@@ -74,7 +74,7 @@ const Footer = () => {
                         className="w-full border-gray-300 focus:border-purple-500 focus:ring-purple-500 px-4 py-2 rounded-lg"
                       />
                       <button className="w-full bg-[#570B97] hover:bg-[#570B97] px-4 py-2 rounded-lg text-white">
-                        Let's Talk
+                      Let&rsquo;s Talk
                       </button>
                     </div>
 
