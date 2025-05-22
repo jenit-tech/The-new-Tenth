@@ -29,10 +29,10 @@ const AboutUsRightSection = () => {
   </p>
   <p className="font-heleveticaNeue font-normal text-[14px] lg:text-[16px] leading-[140%] tracking-[0.01em] whitespace-pre-line">
     As former Managing Director of JWT Malaysia  <span className="hidden lg:inline"> <br/></span>  and Head of Integrated Strategy at  <span className="hidden lg:inline"> <br/></span>
-    McCann Singapore, he's helped transform how  <span className="hidden lg:inline"> <br/></span>  brands connect with audiences in the digital age.
+    McCann Singapore, He&rsquo;s helped transform how  <span className="hidden lg:inline"> <br/></span>  brands connect with audiences in the digital age.
   </p>
   <p className="font-heleveticaNeue font-normal text-[14px] lg:text-[16px] leading-[140%] tracking-[0.01em] whitespace-pre-line">
-    Subhendu’s work has earned the industry's <span className="hidden lg:inline"> <br/></span>  highest recognition, including a Cannes Lions  <span className="hidden lg:inline"> <br/></span>
+  Subhendu&apos;s work has earned the industry&apos;s <span className="hidden lg:inline"> <br/></span>  highest recognition, including a Cannes Lions  <span className="hidden lg:inline"> <br/></span>
     Grand Prix and Gold in Data Driven Marketing.  <span className="hidden lg:inline"> <br/></span> Beyond his agency leadership, he's shaped  <span className="hidden lg:inline"> <br/></span>
     the next generation of talent as a visiting lecturer <span className="hidden lg:inline"> <br/></span>  at Hyper Island Singapore,  
     Google Squared, and Nanyang Technological University. 
