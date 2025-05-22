@@ -4,7 +4,7 @@ import React from 'react'
 const RightSideDataTraining = () => {
   return (
     <div className="w-full">
-      <div className="rounded-[28px] p-5 border-b bg-[#361C75]">
+      <div className="rounded-[28px] p-9 border-b bg-[#361C75]">
         <div className="mb-4">
           <div className="font-sans text-[13px] md:text-[16px] text-white text-base leading-[140%] tracking-[0.01em]">
             <p>
@@ -24,14 +24,7 @@ const RightSideDataTraining = () => {
             <br/>
           </div>
 
-          <div className="flex items-center space-x-1 mt-2">
-          <span className="text-white font-medium text-[13px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue">
-            Read More
-          </span>
-          <button>
-            <Image src="/arrow-up-right.png" alt="Description" width={18} height={18} />
-          </button>
-        </div>
+         
         </div>
       </div>
     </div>

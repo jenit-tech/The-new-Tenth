@@ -87,16 +87,18 @@ export default function RightSideBox() {
       category: "RECRUITMENT",
       title: "AXIATA",
       semititle: `Engaging top tech talent with data-backed narratives`,
-      description: `Axiata analyzed over 19,000 potential employee profiles and over 6,000 industry stories to create a winning Employee Value Proposition (EVP). The result: a data-tested narrative that successfully helped Axiata win the talent war and position as a credible digital leader.`,
+      description: `Winning the talent war is crucial in the tech industry. So we analyzed over 19,000 potential employee profiles and over 6,000 industry stories to create a winning Employee Value Proposition [EVP] for Axiata. 
+      
+      The result : data-tested narrative that was successful far beyond the recruitment drive.  Not only did Axiata easily win the talent war to build the team they needed, the refreshed proposition also established the brand as a credible digital leader.`,
       borderColor: '#8C72D0',
       bgColor: '#8C72D0'
     },
     {
       id: 8,
-      category: "B2B2C & ENTERPRISE",
+      category: "B2B2C | ENTERPRISE",
       title: "INTEL",
       semititle: `True visibility is knowing the real numbers behind the numbers`,
-      description: `Intel built a LIVE dashboard analyzing over 200,000 listings to understand perception and ratings across e-commerce platforms, enabling better retail strategy, OEM alignment, and SKU positioning.`,
+      description: `Intel wanted clarity on how its brand was perceived across key e-commerce platforms. Over 200,000  listings were analyzed to uncover how image and spec similarity with competitors influenced perception and ratings. We then built a LIVE dashboard that made it easy for Intel to observe and act to fine-tune retail strategy, OEM alignment, and SKU positioning. `,
       borderColor: '#9B91B3',
       bgColor: '#9B91B3'
     },

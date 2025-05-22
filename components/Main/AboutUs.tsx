@@ -3,13 +3,13 @@ import AboutUsRightSection from '../sub/AboutUsRightSection' // Adjust path as n
 
 const AboutUs = () => {
   return (
-    <div id="about" className=" pt-20 md:pt-50  bg-gradient-to-b from-purple-50 via-white to-purple-50 ">
+    <div id="about" className=" pt-15 md:pt-40  bg-gradient-to-b from-purple-50 via-white to-purple-50 ">
     
        <div className="px-5 md:px-10 flex flex-col lg:flex-row  pb-30">
          
          {/* Left Content */}
          <div className="w-full lg:w-1/2 m-5 pr-10 md:pr-0">
-         <div className="sticky top-50">
+         <div className="sticky top-80">
               <h2 className="font-heleveticaNeue font-bold text-[28px] md:text-[32px] leading-[1.2] tracking-[0.01em] align-middle text-[#570B97] whitespace-pre-line">
               Established in 2015 in Singapore, The Tenth Floor is led by professionals who bring experience form diverse fields. </h2>
               <p className="font-heleveticaNeue font-normal text-[13px] md:text-[16px] leading-[1.4] tracking-[0.01em] text-[#570B97] mt-4 whitespace-pre-line">

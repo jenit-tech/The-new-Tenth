@@ -3,13 +3,14 @@ import CompanyRightSection from '../sub/CompanyRightSection'
 
 const Company = () => {
   return (
-    <div id="company-section" className=" pt-20 md:pt-50  bg-gradient-to-b from-purple-50 via-white to-purple-50 ">
+    <div id="company-section" className=" pt-15 md:pt-20  bg-gradient-to-b from-purple-50 via-white to-purple-50 ">
     
     <div className="px-5 md:px-10 flex flex-col lg:flex-row lg:justify-center lg:items-center">
 
       
       {/* Left Content */}
       <div className="w-full lg:w-1/2 m-5 pr-10 md:pr-0">
+      <div className="sticky top-60">
          <h2 className=" font-roboto font-bold text-[28px] md:text-[32px] leading-[100%]  align-middle text-[#570B97] pb-1">
   ACROSS REGIONS, 
 </h2>
@@ -22,6 +23,7 @@ const Company = () => {
 
 
 
+         </div>
          </div>
 
          <div className='p-0 md:p-10 '>
