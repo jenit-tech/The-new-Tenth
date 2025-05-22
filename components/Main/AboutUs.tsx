@@ -3,7 +3,7 @@ import AboutUsRightSection from '../sub/AboutUsRightSection' // Adjust path as n
 
 const AboutUs = () => {
   return (
-    <div id="about" className=" pt-15 md:pt-40  bg-gradient-to-b from-purple-50 via-white to-purple-50 ">
+    <div id="about" className=" pt-17 md:pt-40  bg-gradient-to-b from-purple-50 via-white to-purple-50 ">
     
        <div className="px-5 md:px-10 flex flex-col lg:flex-row  pb-30">
          

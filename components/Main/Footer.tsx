@@ -87,7 +87,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className='pr-9 md:pr-19'>
+      <div className='pr-2 md:pr-19'>
         <hr className="w-full h-0.5 bg-gradient-to-r from-purple-700/25 via-purple-700/40 to-purple-700/25 border-0 my-3 md:my-5" />
         <div className="flex flex-col  md:flex-row  md:justify-between items-start md:items-center w-full">
           <p className="font-roboto font-normal text-[14px]  md:text-[16px] leading-[140%] tracking-[0.01em] align-middle text-[#570B97] mb-2 md:mb-0">

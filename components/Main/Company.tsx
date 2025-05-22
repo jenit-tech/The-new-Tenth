@@ -3,7 +3,7 @@ import CompanyRightSection from '../sub/CompanyRightSection'
 
 const Company = () => {
   return (
-    <div id="company-section" className=" pt-15 md:pt-20  bg-gradient-to-b from-purple-50 via-white to-purple-50 ">
+    <div id="company-section" className=" pt-17 md:pt-20  bg-gradient-to-b from-purple-50 via-white to-purple-50 ">
     
     <div className="px-5 md:px-10 flex flex-col lg:flex-row lg:justify-center lg:items-center">
 
