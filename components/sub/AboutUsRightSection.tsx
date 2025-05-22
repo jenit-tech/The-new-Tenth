@@ -34,7 +34,7 @@ const AboutUsRightSection = () => {
   <p className="font-heleveticaNeue font-normal text-[14px] lg:text-[16px] leading-[140%] tracking-[0.01em] whitespace-pre-line">
   Subhendu&apos;s work has earned the industry&apos;s <span className="hidden lg:inline"> <br/></span>  highest recognition, including a Cannes Lions  <span className="hidden lg:inline"> <br/></span>
     Grand Prix and Gold in Data Driven Marketing.  <span className="hidden lg:inline"> <br/></span> Beyond his agency leadership, he&rsquo;s shaped  <span className="hidden lg:inline"> <br/></span>
-    the next generation of talent as a visiting lecturer <span className="hidden lg:inline"> <br/></span>  at Hyper Island Singapore,  
+    the next generation of talent as a visiting lecturer at Hyper Island Singapore,  
     Google Squared, and Nanyang Technological University. 
   </p>
   <p className="font-heleveticaNeue font-normal text-[14px] lg:text-[16px] leading-[140%] tracking-[0.01em] whitespace-pre-line">

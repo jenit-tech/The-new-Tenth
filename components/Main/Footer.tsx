@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className="pl-9 md:pl-14 pr-5 md:pr-0    py-[40px] bg-white mt-5">
+    <div className="pl-9 md:pl-14 pr-4 md:pr-0    py-[40px] bg-white mt-5">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
         <div className="md:col-span-2">
 
@@ -18,7 +18,7 @@ const Footer = () => {
 
         </div>
 
-        <div className="pointer-events-none flex flex-col md:col-span-2">
+        <div className="pointer-events-none flex flex-col md:col-span-1 ">
   <a
     href="#company-section"
     className="pointer-events-auto font-roboto py-1 md:p-3 font-normal text-[14px] md:text-[16px] leading-[100%] tracking-[0%] text-[#570B97]"
@@ -33,7 +33,7 @@ const Footer = () => {
   </a>
 </div>
 
-        <div className="md:col-span-3">
+        <div className="md:col-span-4 ml-0 md:ml-20 mt-0 md:mt-5  ">
           <p className="font-roboto font-normal pb-2   text-[14px]  md:text-[16px] leading-[100%] tracking-[0%] text-[#570B97]">
             36 Robinson Road, #20-01, 
           </p>
@@ -44,8 +44,8 @@ const Footer = () => {
         </div>
 
         <div className="md:col-span-3">
-        <div className="hidden md:block md:w-[500px]">
-                      <div className="relative flex-1 max-w-lg mt-4">
+        <div className="hidden md:block md:w-[495px]">
+                      <div className="relative flex-1 max-w-lg mt-4 ">
                         <input
                           id="email"
                           type="text"

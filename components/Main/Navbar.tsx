@@ -23,17 +23,14 @@ const Navbar = () => {
             className="py-1 px-2 rounded-[33px]"
 
           >
-            <a
-              href="#company-section"
-              className="font-roboto text-[17px] font-medium text-[#570B97] capitalize relative inline-block"
-            >
-              <span
-
-              >
-                Our Clients
-              </span>
-
-            </a>
+       <a
+    href="#company-section"
+    className="relative inline-block font-roboto text-[17px] font-medium text-[#570B97] capitalize transition-all duration-200 hover:text-[#8C72D0]"
+  >
+    <span className="border-b-2 border-transparent pb-1 hover:border-[#8C72D0]  transition-all duration-200">
+      Our Clients
+    </span>
+  </a>
           </button>
         </div>
 
@@ -43,17 +40,14 @@ const Navbar = () => {
             className="py-1 px-2 rounded-[33px]"
 
           >
-            <a
-              href="#company-section"
-              className="font-roboto text-[17px] font-medium text-[#570B97] capitalize relative inline-block"
-            >
-              <span
-
-              >
-                Training
-              </span>
-
-            </a>
+           <a
+    href="#data-training"
+    className="relative inline-block font-roboto text-[17px] font-medium text-[#570B97] capitalize transition-all duration-200 hover:text-[#8C72D0]"
+  >
+    <span className="border-b-2 border-transparent pb-1 hover:border-[#8C72D0] px-1 transition-all duration-200">
+      Training
+    </span>
+  </a>
           </button>
         </div>
 
@@ -63,17 +57,14 @@ const Navbar = () => {
             className="py-1 px-2 rounded-[33px]"
 
           >
-            <a
-              href="#company-section"
-              className="font-roboto text-[17px] font-medium text-[#570B97] capitalize relative inline-block"
-            >
-              <span
-
-              >
-                About Us
-              </span>
-
-            </a>
+           <a
+    href="#about"
+    className="relative inline-block font-roboto text-[17px] font-medium text-[#570B97] capitalize transition-all duration-200 hover:text-[#8C72D0]"
+  >
+    <span className="border-b-2 border-transparent pb-1 hover:border-[#8C72D0] px-1 transition-all duration-200">
+      About Us
+    </span>
+  </a>
           </button>
         </div>
 
@@ -85,7 +76,7 @@ const Navbar = () => {
             type="text"
             placeholder="Enter Your Email"
             className="
-      w-full h-11 px-5 rounded-[18px] border-b border-white
+      w-full h-11 px-5 rounded-[18px] border-b 
       shadow-[0_0_4px_0_rgba(0,0,0,0.25)]
       bg-transparent outline-none pr-32
       placeholder:text-[#570B974D]
@@ -128,12 +119,12 @@ const Navbar = () => {
       {/* Mobile Menu Overlay */}
       
       <div
-        className={`
+        className={`w-full
     fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out bg-gradient-to-b from-purple-50 via-white to-purple-50
     ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}
   `}
       >
-        <div className="w-64 p-8 flex flex-col space-y-6 h-full overflow-y-auto">
+        <div className="w-full p-5 flex flex-col space-y-6 h-full overflow-y-auto">
           {/* Navigation items */}
           {[
             { label: "Our Clients", href: "#company-section" },
@@ -151,31 +142,30 @@ const Navbar = () => {
           ))}
 
           {/* Contact form in mobile menu */}
-          <div className="relative flex-1 max-w-lg ">
+          <div className="relative w-full">
   {/* Input */}
   <input
     id="email"
     type="text"
     placeholder="Enter Your Email"
     className="
-      w-full h-11 px-5 rounded-[18px] border-b border-white
+      w-full h-15 px-5 pr-32 rounded-[18px] border-b border-white
       shadow-[0_0_4px_0_rgba(0,0,0,0.25)]
-      bg-transparent outline-none pr-32
+      bg-transparent outline-none
       placeholder:text-[#570B974D]
       placeholder:font-roboto placeholder:text-base placeholder:font-medium
       placeholder:tracking-wide placeholder:leading-relaxed
       text-[#2E2C32]
-      sm:w-[70%] /* or any wider size for mobile */
     "
   />
   {/* Button */}
   <button
     type="button"
     className="
-      cursor-pointer
-      absolute top-0 right-0 h-11 w-18 rounded-tr-[18px] rounded-br-[18px]
+      absolute top-0 right-0 h-15 w-[100px] rounded-tr-[18px] rounded-br-[18px]
       bg-[#570B97] flex items-center justify-center
-      sm:w-20 /* smaller width for mobile */
+      border-0
+      cursor-pointer
     "
   >
     <span

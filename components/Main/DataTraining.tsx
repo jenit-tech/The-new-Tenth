@@ -5,7 +5,7 @@ const DataTraining = () => {
   return (
     <div id='data-training' className=" pt-17 md:pt-20  bg-gradient-to-b from-purple-50 via-white to-purple-50 ">
     
-    <div className="px-5 md:px-10 flex flex-col lg:flex-row lg:justify-center lg:items-center">
+    <div className="px-5 md:px-9 flex flex-col lg:flex-row lg:justify-center lg:items-center">
   
       {/* Left Content */}
       <div className="w-full lg:w-1/2 m-5 pr-7 md:pr-0">
@@ -17,7 +17,7 @@ const DataTraining = () => {
             </p>
           </div>
 
-          <div className="w-full lg:w-1/2 p-0 md:p-8 px-5">
+          <div className="w-full lg:w-1/2 p-0 md:p-8 px-5 ">
             <RightSideDataTraining />
           </div>
 

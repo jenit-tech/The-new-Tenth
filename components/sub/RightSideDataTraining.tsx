@@ -3,8 +3,8 @@ import React from 'react'
 
 const RightSideDataTraining = () => {
   return (
-    <div className="w-full">
-      <div className="rounded-[28px] p-5 md:p-14 border-b bg-[#361C75]">
+    <div className="w-full ">
+      <div className="rounded-[28px]  px-5 md:px-14 pt-10   border-b bg-[#361C75]">
         <div className="mb-4">
           <div className="font-sans text-[13px] md:text-[16px] text-white text-base leading-[140%] tracking-[0.01em]">
             <p>

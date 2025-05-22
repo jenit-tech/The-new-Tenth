@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useRef, useState, useEffect } from 'react'
-import { ArrowUpRight,  ArrowDownRight } from 'lucide-react';
+import { ArrowUpRight,  ArrowDownRight, Info } from 'lucide-react';
 
 export default function RightSideBox() {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
@@ -67,7 +67,8 @@ export default function RightSideBox() {
       category: "FMCG : PERSONAL CARE",
       title: "UNILEVER",
       semititle: `Consumer journey clarity that cuts through the clutter`,
-      description: `Clear needed a unified view of its digital performance across platforms. We identified the right metrics and built custom dashboards that brought campaign, content and keyword insights under one roof. The result? Smarter keyword strategy, optimized website content and reduced spend on paid promotions that led to higher visibility and conversions.`,
+      description: `Clear needed a unified view of its digital performance across platforms. We identified the right metrics and built custom dashboards that brought campaign, content and keyword insights under one roof. 
+      The result? Smarter keyword strategy, optimized website content and reduced spend on paid promotions that led to higher visibility and conversions.`,
       borderColor: '#C27BA0',
       bgColor: '#C27BA0'
     },
@@ -230,10 +231,10 @@ useEffect(() => {
               type="button"
               className="
                 absolute top-0 right-0 h-11 w-28 rounded-tr-[18px] rounded-br-[18px]
-                bg-[#9B87F5] flex items-center justify-center
+                bg-[#9B87F5] flex items-center justify-center cursor-pointer
               "
             >
-              <span className="font-roboto text-[12px] md:text-[16px] leading-6 text-[#FAFAFA] text-center align-middle">
+              <span className="font-roboto text-[12px] md:text-[16px] leading-6 text-[#FAFAFA] text-center align-middle ">
                 Submit
               </span>
             </button>
@@ -253,26 +254,8 @@ useEffect(() => {
         </div>
 
         {/* Additional message with icon */}
-        <div className="flex items-start mt-4 px-4">
-        <svg
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  width="16"
-  height="16"
-  className="w-[14px] h-[14px] mt-2.5"
-  viewBox="0 0 16 16"
->
-  <path
-    d="M0 0 C2.5 1.5 2.5 1.5 4 4 C4.791013 8.02098277 4.62153384 10.96411027 2.5 14.5 C-1.03588973 16.62153384 -3.97901723 16.791013 -8 16 C-10.5 14.5 -10.5 14.5 -12 12 C-12.791013 7.97901723 -12.62153384 5.03588973 -10.5 1.5 C-6.96411027 -0.62153384 -4.02098277 -0.791013 0 0 Z M-10 4 C-11.16977494 6.34872531 -11.16977494 6.34872531 -11 9 C-9.67963999 12.2275467 -8.86910604 13.63406062 -5.625 15 C-2.17164129 15 -0.64253676 14.20211397 2 12 C3.16977494 9.65127469 3.16977494 9.65127469 3 7 C1.67963999 3.7724533 0.86910604 2.36593938 -2.375 1 C-5.82835871 1 -7.35746324 1.79788603 -10 4 Z"
-    fill="#3A3A3A"
-    transform="translate(12,0)"
-  />
-  <path
-    d="M0 0 C0.66 0 1.32 0 2 0 C2.33 2.64 2.66 5.28 3 8 C1.68 7.67 0.36 7.34 -1 7 C-0.67 4.69 -0.34 2.38 0 0 Z"
-    fill="#3A3A3A"
-    transform="translate(7,4)"
-  />
-</svg>
+        <div className="flex  items-start ">
+        <Info className='text-[#3A3A3A] w-5 h-5 mt-2' />
   <p className="font-rubik font-normal text-[11px] md:text-[15px] leading-[140%] tracking-[0.01em] text-[#3A3A3A] px-4 py-2 rounded-[8px] ml-2">
     The case study will be shared within 24 hours
   </p>
@@ -319,7 +302,7 @@ useEffect(() => {
               key={card.id}
               onClick={() => handleDotClick(index)}
               style={style}
-              className={`w-2 h-2 rounded-full transition-all duration-300 focus:outline-none ${isActive ? 'scale-125' : ''
+              className={`w-2 h-2 rounded-full cursor-pointer transition-all duration-300 focus:outline-none ${isActive ? 'scale-125' : ''
                 }`}
               aria-label={`Go to ${card.title}`}
             />
