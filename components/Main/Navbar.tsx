@@ -150,7 +150,7 @@ const Navbar = () => {
           ))}
 
           {/* Contact form in mobile menu */}
-          <div className="relative flex-1 max-w-lg">
+          <div className="relative flex-1 max-w-lg ">
   {/* Input */}
   <input
     id="email"

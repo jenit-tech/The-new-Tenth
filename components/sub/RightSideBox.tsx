@@ -1,5 +1,5 @@
 "use client"
-import Image from 'next/image'
+
 import React, { useRef, useState, useEffect } from 'react'
 import { ArrowUpRight,  ArrowDownRight } from 'lucide-react';
 
@@ -254,7 +254,25 @@ useEffect(() => {
 
         {/* Additional message with icon */}
         <div className="flex items-start mt-4 px-4">
-  <Image src="/layer.png" alt="Description" width={16} height={16} className='w-[14px] h-[14px] mt-2.5' />
+        <svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  width="16"
+  height="16"
+  className="w-[14px] h-[14px] mt-2.5"
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M0 0 C2.5 1.5 2.5 1.5 4 4 C4.791013 8.02098277 4.62153384 10.96411027 2.5 14.5 C-1.03588973 16.62153384 -3.97901723 16.791013 -8 16 C-10.5 14.5 -10.5 14.5 -12 12 C-12.791013 7.97901723 -12.62153384 5.03588973 -10.5 1.5 C-6.96411027 -0.62153384 -4.02098277 -0.791013 0 0 Z M-10 4 C-11.16977494 6.34872531 -11.16977494 6.34872531 -11 9 C-9.67963999 12.2275467 -8.86910604 13.63406062 -5.625 15 C-2.17164129 15 -0.64253676 14.20211397 2 12 C3.16977494 9.65127469 3.16977494 9.65127469 3 7 C1.67963999 3.7724533 0.86910604 2.36593938 -2.375 1 C-5.82835871 1 -7.35746324 1.79788603 -10 4 Z"
+    fill="#3A3A3A"
+    transform="translate(12,0)"
+  />
+  <path
+    d="M0 0 C0.66 0 1.32 0 2 0 C2.33 2.64 2.66 5.28 3 8 C1.68 7.67 0.36 7.34 -1 7 C-0.67 4.69 -0.34 2.38 0 0 Z"
+    fill="#3A3A3A"
+    transform="translate(7,4)"
+  />
+</svg>
   <p className="font-rubik font-normal text-[11px] md:text-[15px] leading-[140%] tracking-[0.01em] text-[#3A3A3A] px-4 py-2 rounded-[8px] ml-2">
     The case study will be shared within 24 hours
   </p>
