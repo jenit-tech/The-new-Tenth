@@ -94,7 +94,7 @@ const Navbar = () => {
           >
             <span
               className="
-        font-roboto font-medium text-base leading-6
+        font-roboto  text-[12px] md:text-[16px] leading-6
         text-[#FAFAFA]
         text-center align-middle
       "
