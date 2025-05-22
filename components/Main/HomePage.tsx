@@ -9,14 +9,16 @@ import RightSideBox from '../sub/RightSideBox'
 
 
 const HomePage = () => {
+  
   return (
    <>
-     <div id="home" className=" pt-20 md:pt-36 md:pt-50   bg-gradient-to-b from-purple-50 via-white to-purple-50 z-50">
+  
+     <div id="home" className="bg-gradient-to-b from-purple-50 via-white to-purple-50 z-50">
     
        <div className="px-5 md:px-10 flex flex-col lg:flex-row  ">
          
          {/* Left Content */}
-         <div className="w-full lg:w-1/2 m-5 pr-10 md:pr-0">
+         <div className="w-full lg:w-1/2 m-5 pr-10 md:pr-0  pt-20  md:pt-50 ">
          <div className="sticky top-60">
 
          <h2
@@ -59,6 +61,7 @@ const HomePage = () => {
          </div>
 
          {/* Right Side Box with scroll */}
+         
         
          <div className="w-full lg:w-1/2 p-0 md:p-5 z-30">
         
@@ -70,6 +73,7 @@ const HomePage = () => {
         </div>
        </div>
      </div>
+    
    
    </>
   )

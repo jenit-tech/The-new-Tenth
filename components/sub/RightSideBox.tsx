@@ -5,6 +5,7 @@ import React, { useRef, useState, useEffect } from 'react'
 export default function RightSideBox() {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
   const [activeIndex, setActiveIndex] = useState(0)
+  
   const [activeCardIndex, setActiveCardIndex] = useState<number | null>(null);
   const cards = [
     {
@@ -146,7 +147,12 @@ useEffect(() => {
   }
 
   return (
-    <div className="flex flex-row items-start px-4 py-2 space-x-4 z-10">
+    <div className=''>
+     <div className='hidden md:block md:sticky top-20 w-full h-[10vh] bg-gradient-to-b from-purple-50 via-white to-purple-50 z-120'>
+
+</div>
+    <div className="flex flex-row items-start px-4 py-2 space-x-4 z-10 pt-0 md:pt-33">
+
 
       {/* Cards */}
       <div className="flex flex-col space-y-8 w-full max-w-3xl">
@@ -283,7 +289,7 @@ useEffect(() => {
 
 
       {/* Dots */}
-      <div className="sticky top-[200px] self-start z-50 flex flex-col items-center space-y-4">
+      <div className="sticky top-[200px] md:top-[300px]  self-start z-50 flex flex-col items-center  space-y-4">
         {cards.map((card, index) => {
           const isActive = index === activeIndex;
           const style = {
@@ -303,6 +309,8 @@ useEffect(() => {
           );
         })}
       </div>
+    </div>
+   
     </div>
   )
 }
