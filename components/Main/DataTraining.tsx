@@ -8,7 +8,7 @@ const DataTraining = () => {
     <div className="px-5 md:px-10 flex flex-col lg:flex-row lg:justify-center lg:items-center">
   
       {/* Left Content */}
-      <div className="w-full lg:w-1/2 m-5">
+      <div className="w-full lg:w-1/2 m-5 pr-10 md:pr-0">
             <h2 className="font-helveticaNeue font-bold text-[28px] md:text-[32px] leading-[1.2] tracking-[0.01em] text-[#570B97] mb-4">
               We preach what we practice: <span className="hidden sm:inline"> <br/></span> Data Training from Real World <span className="hidden sm:inline"> <br/></span> Practitioners
             </h2>

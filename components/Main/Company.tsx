@@ -9,7 +9,7 @@ const Company = () => {
 
       
       {/* Left Content */}
-      <div className="w-full lg:w-1/2 m-5">
+      <div className="w-full lg:w-1/2 m-5 pr-10 md:pr-0">
          <h2 className=" font-roboto font-bold text-[28px] md:text-[32px] leading-[100%] tracking-[0.01em] align-middle text-[#570B97] pb-4">
   ACROSS REGIONS, <br/> ACROSS INDUSTRIES
 </h2>
