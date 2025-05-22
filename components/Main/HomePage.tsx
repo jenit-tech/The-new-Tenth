@@ -20,17 +20,12 @@ const HomePage = () => {
          {/* Left Content */}
          <div className="w-full lg:w-1/2 m-5 pr-10 md:pr-0  pt-20  md:pt-50 ">
          <div className="sticky top-60">
+         <h2 className="font-helveticaNeue font-bold text-[28px] md:text-[32px] leading-[1.2] tracking-[0.01em] text-[#570B97] mb-4">
+         We turn what your audience say, do <br/>
+  and how they behave into your <br/> competitive edge 
+  with precision, speed <br/> and simplicity.   </h2>
 
-         <h2
-  className="
-    font-heleveticaNeue font-bold text-[28px] md:text-[32px] 
-     text-[#570B97]
-  "
->
-  We turn what your audience say, do <br/>
-  and how they behave into your competitive edge 
-  with precision, speed and simplicity.
-</h2>
+        
            <p
              className="
                w-full max-w-[651px]

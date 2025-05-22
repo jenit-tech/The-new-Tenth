@@ -1,6 +1,7 @@
 "use client"
 import Image from 'next/image'
 import React, { useRef, useState, useEffect } from 'react'
+import { ArrowUpRight,  ArrowDownRight } from 'lucide-react';
 
 export default function RightSideBox() {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
@@ -44,9 +45,7 @@ export default function RightSideBox() {
       category: "PHARMACEUTICAL",
       title: "PFIZER",
       semititle: `Digital signals that uncovered Asia’s vitamin revolution`,
-      description: `Pfizer (now Haleon) needed to understand changing attitudes toward Asia's growing wellness markets.
-    
-    Instead of relying on lengthy surveys, we analyzed search data from Google and Baidu to uncover the changing consumer interest and behavior in wellness today.
+      description: `Pfizer (now Haleon) needed to understand changing attitudes toward Asia's growing wellness markets.Instead of relying on lengthy surveys, we analyzed search data from Google and Baidu to uncover the changing consumer interest and behavior in wellness today.
     
     The findings helped the brand refine their product innovation and messaging strategy that resonated with Chinese and Taiwanese consumers.`,
       borderColor: '#751A47',
@@ -59,11 +58,7 @@ export default function RightSideBox() {
       semititle: `Rethinking wellness with data`,
       description: `We analysed what Indonesian consumers were actually saying and discovered insights that helped Nestlé to completely rethink their Green Coffee approach.
     
-    The discoveries shaped the winning narrative. Instead of complicated health messages, they focused on beauty benefits that people really wanted.
-    
-    Starting with just social media posts, the idea connected so well that it grew into Nestlé's main campaign.
-    
-    The result? They went from trailing the competition to becoming Indonesia's coffee leader.`,
+    The discoveries shaped the winning narrative. Instead of complicated health messages, they focused on beauty benefits that people really wanted.Starting with just social media posts, the idea connected so well that it grew into Nestlé's main campaign.The result? They went from trailing the competition to becoming Indonesia's coffee leader.`,
       borderColor: '#A64D79',
       bgColor: '#A64D79'
     },
@@ -148,9 +143,8 @@ useEffect(() => {
 
   return (
     <div className=''>
-     <div className='hidden md:block md:sticky top-20 w-full h-[10vh] bg-gradient-to-b from-purple-50 via-white to-purple-50 z-120'>
-
-</div>
+     <div className="hidden md:block md:sticky top-25 lg:top-32 w-full h-[10vh] bg-gradient-to-b from-purple-50 via-white to-purple-50 z-120 border-0 outline-none">
+     </div>
     <div className="flex flex-row items-start px-4 py-2 space-x-4 z-10 pt-0 md:pt-33">
 
 
@@ -167,7 +161,7 @@ useEffect(() => {
               }}
 
               onClick={() => handleCardClick(index)}
-              className="cursor-pointer rounded-[28px] p-5 border-b backdrop-blur-sm shadow-[0_0_5px_0_#A29DBB] w-full scroll-mt-43"
+              className="rounded-[28px] p-5 border-b backdrop-blur-sm shadow-[0_0_5px_0_#A29DBB] w-full scroll-mt-43"
               style={{
                 backgroundColor: bgColor, // keep transparent for content visibility
                 borderBottom: `4px solid ${borderColor}`,
@@ -175,23 +169,23 @@ useEffect(() => {
             >
               {/* Card Content */}
               <div className="mb-4">
-                <span className="text-[#FFFFFF] font-medium text-[13px] md:text-[13px] leading-[140%] tracking-[0.01em] font-heleveticaNeue block">
+                <span className="text-[#FFFFFF] font-medium text-[13px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue block mb-3">
                   {card.category}
                 </span>
-                <span className="text-[#FFFFFF] font-bold text-[20px] md:text-[24px] leading-[140%] tracking-[0.01em] font-helvetica block mt-1">
+                <span className="text-[#FFFFFF] font-bold text-[20px] md:text-[24px] leading-[140%] tracking-[0.01em] font-helvetica block mb-2">
                   {card.title}
                 </span>
                 <span
                   className="text-white font-bold text-[20px] md:text-[24px] leading-[140%] tracking-[0.01em] font-helvetica mt-2"
                   dangerouslySetInnerHTML={{ __html: card.semititle }}
                 />
-                <p className="text-white font-normal text-[13px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue whitespace-pre-line mt-2">
+                <p className="text-white font-normal text-[13px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue whitespace-pre-line mt-3">
                   {card.description}
                 </p>
               
               </div>
               {activeCardIndex === index && (
-                <div className="mt-4 relative"> {/* Make container relative for absolute positioning */}
+                <div className="mt-4 relative "> {/* Make container relative for absolute positioning */}
                   {/* Close Button */}
                   <button
                     onClick={() => setActiveCardIndex(null)} // Or your close handler
@@ -208,7 +202,8 @@ useEffect(() => {
       {/* Content layer */}
       <div className="relative z-10">
         {/* Paragraph */}
-        <p className="font-rubik font-medium text-[13px] md:text-[16px] leading-[140%] tracking-[0.01em] text-center text-[#2E2C32B2] mb-4">
+        <p className="font-rubik font-medium text-left
+         text-[13px] md:text-[16px] leading-[140%] tracking-[0.01em] text-center text-[#2E2C32B2] mb-4">
           To receive this case study please enter your email Address
         </p>
 
@@ -256,12 +251,12 @@ useEffect(() => {
         </div>
 
         {/* Additional message with icon */}
-        <div className="flex items-center mt-4 px-4">
-          <Image src="/layer.png" alt="Description" width={16} height={16} />
-          <p className="font-rubik font-normal text-[11px] md:text-[15px] leading-[140%] tracking-[0.01em] text-[#3A3A3A] px-4 py-2 rounded-[8px] ml-2">
-            The case study will be shared within 24 hours
-          </p>
-        </div>
+        <div className="flex items-start mt-4 px-4">
+  <Image src="/layer.png" alt="Description" width={16} height={16} className='w-[14px] h-[14px] mt-2.5' />
+  <p className="font-rubik font-normal text-[11px] md:text-[15px] leading-[140%] tracking-[0.01em] text-[#3A3A3A] px-4 py-2 rounded-[8px] ml-2">
+    The case study will be shared within 24 hours
+  </p>
+</div>
       </div>
     </div>
    
@@ -272,13 +267,15 @@ useEffect(() => {
   onClick={() => setActiveCardIndex(isActive ? null : index)}
 >
   <span
-    className={`font-medium text-[13px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue ${
-      isActive ? 'text-[#2E2C32B2]' : 'text-white'
-    }`}
+    className="font-medium text-[13px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue
+      text-white"
+ 
   >
     {isActive ? 'Read Less' : 'Read More'}
   </span>
-  <Image src="/arrow-up-right.png" alt="Description" width={18} height={18} />
+ 
+
+  {isActive ? <ArrowDownRight className='text-white w-5 h-5' />   :  <ArrowUpRight className='text-white w-5 h-5' />   }
 </button>
             </div>
           )

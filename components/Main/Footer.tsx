@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className="px-9 md:px-14  py-[40px] bg-white mt-5">
+    <div className="pl-9 md:pl-14 pr-5 md:pr-0    py-[40px] bg-white mt-5">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
         <div className="md:col-span-2">
 
@@ -18,16 +18,21 @@ const Footer = () => {
 
         </div>
 
-        <div className="flex flex-col md:col-span-2">
-          <a href="#company-section" className="font-roboto py-1 md:p-3 font-normal text-[14px]  md:text-[16px] leading-[100%] tracking-[0%] text-[#570B97]">
-            Our Client
-          </a>
-          <a href="#about" className="font-roboto font-normal py-1 md:p-3 text-[14px]  md:text-[16px] leading-[100%] tracking-[0%] text-[#570B97]">
-            About Us
-          </a>
+        <div className="pointer-events-none flex flex-col md:col-span-2">
+  <a
+    href="#company-section"
+    className="pointer-events-auto font-roboto py-1 md:p-3 font-normal text-[14px] md:text-[16px] leading-[100%] tracking-[0%] text-[#570B97]"
+  >
+    Our Client
+  </a>
+  <a
+    href="#about"
+    className="pointer-events-auto font-roboto py-1 md:p-3 font-normal text-[14px] md:text-[16px] leading-[100%] tracking-[0%] text-[#570B97]"
+  >
+    About Us
+  </a>
+</div>
 
-
-        </div>
         <div className="md:col-span-3">
           <p className="font-roboto font-normal pb-2   text-[14px]  md:text-[16px] leading-[100%] tracking-[0%] text-[#570B97]">
             36 Robinson Road, #20-01, 
@@ -57,13 +62,13 @@ const Footer = () => {
                       />
                         <button
                           type="button"
-                          className="
+                          className="cursor-pointer
         absolute top-0 right-0 h-11 w-28 rounded-tr-[18px] rounded-br-[18px]
         bg-[#570B97] flex items-center justify-center
       "
                         >
                           <span className="font-roboto text-[12px] md:text-[16px] leading-6 text-[#FAFAFA] text-center align-middle">
-                            Submit
+                          Let&rsquo;s Talk
                           </span>
                         </button>
                       </div>
@@ -82,9 +87,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div>
-        <hr className="w-full h-0.5 bg-gradient-to-r from-purple-700/25 via-purple-700/40 to-purple-700/25 border-0 my-3 md:my-5 " />
-        <div className="flex flex-col  md:flex-row  md:justify-between items-start md:items-center w-full px-0 md:px-4">
+      <div className='pr-9 md:pr-19'>
+        <hr className="w-full h-0.5 bg-gradient-to-r from-purple-700/25 via-purple-700/40 to-purple-700/25 border-0 my-3 md:my-5" />
+        <div className="flex flex-col  md:flex-row  md:justify-between items-start md:items-center w-full">
           <p className="font-roboto font-normal text-[14px]  md:text-[16px] leading-[140%] tracking-[0.01em] align-middle text-[#570B97] mb-2 md:mb-0">
             © 2025 The Tenth Floor Pte Ltd. All rights reserved.
           </p>

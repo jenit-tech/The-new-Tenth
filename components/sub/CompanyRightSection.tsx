@@ -80,7 +80,7 @@ const CompanyRightSection = () => {
             key={index}
             onClick={() => scrollTo(index)}
             className={cn(
-              "h-3 w-3 rounded-full transition-colors duration-200",
+              "h-2 w-2 rounded-full transition-colors duration-200",
               selectedIndex === index ? "bg-[#674EA7]" : "bg-[#B4A7D5] border border-[#570B97]"
             )}
             aria-label={`Go to slide ${index + 1}`}
