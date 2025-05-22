@@ -9,7 +9,7 @@ const Company = () => {
 
       
       {/* Left Content */}
-      <div className="w-full lg:w-1/2 m-5 pr-10 md:pr-0">
+      <div className="w-full lg:w-1/2 m-5 pr-7 md:pr-0">
       <div className="sticky top-60">
          <h2 className=" font-roboto font-bold text-[28px] md:text-[32px] leading-[100%]  align-middle text-[#570B97] pb-1">
   ACROSS REGIONS, 

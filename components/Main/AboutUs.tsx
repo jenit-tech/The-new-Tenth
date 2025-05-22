@@ -8,7 +8,7 @@ const AboutUs = () => {
        <div className="px-5 md:px-10 flex flex-col lg:flex-row  pb-30">
          
          {/* Left Content */}
-         <div className="w-full lg:w-1/2 m-5 pr-10 md:pr-0">
+         <div className="w-full lg:w-1/2 m-5 pr-7 md:pr-0">
          <div className="sticky top-80">
               <h2 className="font-heleveticaNeue font-bold text-[28px] md:text-[32px] leading-[1.2] tracking-[0.01em] align-middle text-[#570B97] whitespace-pre-line">
               Established in 2015 in Singapore, The Tenth Floor is led by professionals who bring experience form diverse fields. </h2>

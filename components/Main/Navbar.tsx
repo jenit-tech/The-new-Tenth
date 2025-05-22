@@ -129,7 +129,7 @@ const Navbar = () => {
       
       <div
         className={`
-    fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out bg-[#FFFFFF]
+    fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out bg-gradient-to-b from-purple-50 via-white to-purple-50
     ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}
   `}
       >
