@@ -4,7 +4,7 @@ import React from 'react'
 const RightSideDataTraining = () => {
   return (
     <div className="w-full">
-      <div className="rounded-[28px] p-9 border-b bg-[#361C75]">
+      <div className="rounded-[28px] p-14 border-b bg-[#361C75]">
         <div className="mb-4">
           <div className="font-sans text-[13px] md:text-[16px] text-white text-base leading-[140%] tracking-[0.01em]">
             <p>
