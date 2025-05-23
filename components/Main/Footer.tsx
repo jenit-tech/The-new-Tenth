@@ -64,7 +64,7 @@ const Footer = () => {
               />
               <button
                 type="button"
-                className="absolute top-0 right-0 h-11 w-28 rounded-tr-[18px] rounded-br-[18px] bg-[#570B97] flex items-center justify-center"
+                className="absolute top-0 right-0 h-11 w-28 rounded-tr-[18px] rounded-br-[18px] bg-[#570B97] flex items-center justify-center cursor-pointer"
               >
                 <span className="font-roboto text-[12px] md:text-[16px] leading-6 text-[#FAFAFA] text-center align-middle">
                   Let’s Talk
