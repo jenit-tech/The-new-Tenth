@@ -47,7 +47,7 @@ const AboutUsRightSection = () => {
 
 
       {/* Card 2 */}
-      <div className="flex flex-col lg:flex-row gap-5 lg:gap-[40px] rounded-[28px] p-5 border-b bg-gradient-to-br from-white/60 to-white/25 backdrop-blur-sm shadow-[0px_0px_5px_0px_#570B9799] mb-7 w-full overflow-hidden">
+      <div className="flex flex-col sm:flex-row gap-5 sm:gap-[40px] rounded-[28px] p-5 border-b bg-gradient-to-br from-white/60 to-white/25 backdrop-blur-sm shadow-[0px_0px_5px_0px_#570B9799] mb-7 w-full overflow-hidden">
   <Image
     src="/persontwo.png"
     alt="Hasnah Mohamed Samidin"
@@ -85,8 +85,8 @@ const AboutUsRightSection = () => {
 
 
       {/* Card 3 */}
-      <div className="flex flex-col lg:flex-row gap-5 lg:gap-[40px] rounded-[28px] p-5 border-b bg-gradient-to-br from-white/60 to-white/25 backdrop-blur-sm shadow-[0px_0px_5px_0px_#570B9799] mb-7 w-full overflow-hidden">
-  <Image
+      <div className="flex flex-col sm:flex-row gap-5 sm:gap-[40px] rounded-[28px] p-5 border-b bg-gradient-to-br from-white/60 to-white/25 backdrop-blur-sm shadow-[0px_0px_5px_0px_#570B9799] mb-7 w-full overflow-hidden">
+      <Image
     src="/personthree.png"
     alt="Ahana Mukherjee"
     width={142}

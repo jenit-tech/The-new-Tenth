@@ -50,30 +50,35 @@ const Footer = () => {
         <div className="w-full mt-4 md:mt-0">
           {/* Desktop view */}
           <div className="hidden md:flex md:items-center md:space-x-2 pr-16">
-            <div className="relative flex-1 max-w-lg">
-              <input
-                id="email"
-                type="text"
-                placeholder="Enter Your Email"
-                className="
-                  w-full h-11 px-5 rounded-[18px] border-b border-white
-                  shadow-[0_0_4px_0_rgba(0,0,0,0.25)]
-                  bg-transparent outline-none
-                  placeholder:text-[#570B974D]
-                  placeholder:font-roboto placeholder:text-base placeholder:font-medium
-                  placeholder:tracking-wide placeholder:leading-relaxed
-                  text-[#2E2C32]
-                "
-              />
-              <button
-                type="button"
-                className="absolute top-0 right-0 h-11 w-28 rounded-tr-[18px] rounded-br-[18px] bg-[#570B97] flex items-center justify-center cursor-pointer hover:bg-[#8C72D0]"
-              >
-                <span className="font-roboto text-[14px] md:text-[16px] leading-6 text-[#FAFAFA] text-center align-middle">
-                  Let’s Talk
-                </span>
-              </button>
-            </div>
+          <div className="relative w-full min-w-[250px] md:min-w-[300px] lg:min-w-[350px]">
+  {/* Input */}
+  <input
+    id="email"
+    type="text"
+    placeholder="Enter Your Email"
+    className="
+      w-full h-11 px-5 rounded-[18px] border-b border-white
+      shadow-[0_0_4px_0_rgba(0,0,0,0.25)]
+      bg-transparent outline-none
+      placeholder:text-[#570B974D]
+      placeholder:font-roboto placeholder:text-base placeholder:font-medium
+      placeholder:tracking-wide placeholder:leading-relaxed
+      text-[#2E2C32]
+    "
+  />
+  {/* Button */}
+  <button
+    type="button"
+    className="
+      absolute top-0 right-0 h-11 w-28 rounded-tr-[18px] rounded-br-[18px]
+      bg-[#570B97] flex items-center justify-center cursor-pointer hover:bg-[#8C72D0]
+    "
+  >
+    <span className="font-roboto text-[14px] md:text-[16px] leading-6 text-[#FAFAFA]">
+      Let’s Talk
+    </span>
+  </button>
+</div>
           </div>
           {/* Mobile view */}
           <div className="block md:hidden pt-4 space-y-4 pr-7 pl-2">

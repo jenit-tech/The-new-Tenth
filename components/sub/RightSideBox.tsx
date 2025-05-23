@@ -148,7 +148,7 @@ useEffect(() => {
     <div className=''>
      <div className="hidden md:block md:sticky top-25 lg:top-32 w-full h-[10vh] bg-gradient-to-b from-purple-50 via-white to-purple-50 z-120 border-0 outline-none">
      </div>
-    <div className="flex flex-row items-start px-4 py-2 space-x-4 z-10 pt-0 md:pt-33">
+    <div className="flex flex-row items-start px-4 py-2 space-x-4 z-10 pt-0 md:pt-33 mt-4 md:mt-0">
 
 
       {/* Cards */}
