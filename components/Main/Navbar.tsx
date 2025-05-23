@@ -11,7 +11,16 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 w-full flex items-center justify-between h-[70px] md:h-[144px] px-9 md:px-14  py-3 bg-[#F2F0FA]  z-50 ">
       {/* Logo Image */}
-      <Image src="/logo.png" alt="Description" width={120} height={120} className="w-13 md:w-[120px]" />
+      <a href="#home">
+  <Image
+    src="/logo.png"
+    alt="Description"
+    width={120}
+    height={120}
+    className="w-12 md:w-[120px] px-1 md:px-3" // Using arbitrary value for styling
+  />
+</a>
+     
 
       {/* Desktop & Tablet Menu */}
 
@@ -94,7 +103,7 @@ const Navbar = () => {
           >
             <span
               className="
-        font-roboto  text-[12px] md:text-[16px] leading-6
+        font-roboto  text-[14px] md:text-[16px] leading-6
         text-[#FAFAFA]
         text-center align-middle
       "
@@ -134,7 +143,7 @@ const Navbar = () => {
             <a
               key={item.label}
               href={item.href}
-              className="text-gray-900 hover:text-purple-800 text-[12px] font-medium transition-colors"
+              className="text-gray-900 hover:text-purple-800 text-[14px] font-medium transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               {item.label}
@@ -170,7 +179,7 @@ const Navbar = () => {
   >
     <span
       className="
-        font-roboto text-[10px] text-base leading-6
+        font-roboto text-[14px] text-base leading-6
         text-[#FAFAFA]
         text-center align-middle
       "

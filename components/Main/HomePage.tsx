@@ -15,7 +15,7 @@ const HomePage = () => {
   
      <div id="home" className="bg-gradient-to-b from-purple-50 via-white to-purple-50 z-50">
     
-       <div className="px-5 md:px-10 flex flex-col lg:flex-row  ">
+       <div className="px-8 md:px-10 flex flex-col lg:flex-row  ">
          
          {/* Left Content */}
          <div className="w-full lg:w-1/2 m-5 pr-7 md:pr-0  pt-20  md:pt-50 ">
@@ -36,17 +36,17 @@ const HomePage = () => {
              SIMPLE, EFFICIENT, PRECISE
            </p>
            <div className="space-y-6">
-  <p className=" font-heleveticaNeue font-normal text-[12px] md:text-[16px] leading-[1.4] tracking-[0.01em] align-middle text-[#570B97] mt-4 whitespace-pre-line">
+  <p className=" font-heleveticaNeue font-normal text-[14px] md:text-[16px] leading-[1.4] tracking-[0.01em] align-middle text-[#570B97] mt-4 whitespace-pre-line">
     Our approach is simple but powerful. We combine your existing data with public 
     information and advanced analytics to reveal patterns others miss.
   </p>
 
-  <p className=" font-heleveticaNeue font-normal text-[12px] md:text-[16px] leading-[1.4] tracking-[0.01em] align-middle text-[#570B97] mt-4 whitespace-pre-line">
+  <p className=" font-heleveticaNeue font-normal text-[14px] md:text-[16px] leading-[1.4] tracking-[0.01em] align-middle text-[#570B97] mt-4 whitespace-pre-line">
     No unnecessary complexity, just clear insights that help you reach customers faster and 
     more efficiently.
   </p>
 
-  <p className=" font-heleveticaNeue font-normal text-[12px] md:text-[16px] leading-[1.4] tracking-[0.01em] align-middle text-[#570B97] mt-4 whitespace-pre-line">
+  <p className=" font-heleveticaNeue font-normal text-[14px] md:text-[16px] leading-[1.4] tracking-[0.01em] align-middle text-[#570B97] mt-4 whitespace-pre-line">
   The result? Strategies that work better and cost less. We&apos;re self-funded, independent 
   and focused on one thing: delivering results you can measure.
 </p>
