@@ -11,20 +11,18 @@ const RightSideDataTraining = () => {
               At The Tenth Floor, we believe digital is just human behavior captured in data. Our training is designed to help you uncover meaning in that behavior, then act on it with clarity and confidence.
               This is not a course in tools. It’s a way of thinking.
             </p>
-          
-            <br/>
+
+            <br />
             <p>
               You’ll learn how to investigate real-world business problems using live data, unearth human motivations beneath the noise, and make insight-led decisions that create impact.
             </p>
-            <br/>
+            <br />
             <p>
               Whether you’re in marketing, product, strategy, or innovation, our approach equips you to move fast, ask sharper questions, and build smarter hypotheses. You’ll leave with a repeatable decision framework, a deeper comfort with ambiguity and the confidence to build ideas rooted in reality, not opinion.
             </p>
-            <br/>
-            <br/>
+            <br />
+            <br />
           </div>
-
-         
         </div>
       </div>
     </div>

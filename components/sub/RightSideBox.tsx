@@ -1,12 +1,12 @@
 "use client"
 
 import React, { useRef, useState, useEffect } from 'react'
-import { ArrowUpRight,  ArrowDownRight, Info } from 'lucide-react';
+import { ArrowUpRight, ArrowDownRight, Info } from 'lucide-react';
 
 export default function RightSideBox() {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([])
   const [activeIndex, setActiveIndex] = useState(0)
-  
+
   const [activeCardIndex, setActiveCardIndex] = useState<number | null>(null);
   const cards = [
     {
@@ -106,33 +106,33 @@ export default function RightSideBox() {
   ];
 
   // Step 1: Ensure refs array matches cards length
-useEffect(() => {
-  cardRefs.current = cardRefs.current.slice(0, cards.length);
-}, [cards.length]);
+  useEffect(() => {
+    cardRefs.current = cardRefs.current.slice(0, cards.length);
+  }, [cards.length]);
 
-// Step 2: Set up intersection observers
-useEffect(() => {
-  const observers: IntersectionObserver[] = [];
+  // Step 2: Set up intersection observers
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
 
-  cardRefs.current.forEach((ref, index) => {
-    if (ref) {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setActiveIndex(index);
-          }
-        },
-        { threshold: 0.5 }
-      );
-      observer.observe(ref);
-      observers.push(observer);
-    }
-  });
+    cardRefs.current.forEach((ref, index) => {
+      if (ref) {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              setActiveIndex(index);
+            }
+          },
+          { threshold: 0.5 }
+        );
+        observer.observe(ref);
+        observers.push(observer);
+      }
+    });
 
-  return () => {
-    observers.forEach((observer) => observer.disconnect());
-  };
-}, [cards.length]);
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
+  }, [cards.length]);
 
   const handleDotClick = (index: number) => {
     setActiveIndex(index)
@@ -146,171 +146,167 @@ useEffect(() => {
 
   return (
     <div className=''>
-     <div className="hidden md:block md:sticky top-25 lg:top-32 w-full h-[10vh] bg-gradient-to-b from-purple-50 via-white to-purple-50 z-120 border-0 outline-none">
-     </div>
-    <div className="flex flex-row items-start px-4 py-2 space-x-4 z-10 pt-0 md:pt-33 mt-4 md:mt-0">
+      <div className="hidden md:block md:sticky top-25 lg:top-32 w-full h-[10vh] bg-gradient-to-b from-purple-50 via-white to-purple-50 z-120 border-0 outline-none">
+      </div>
+      <div className="flex flex-row items-start px-4 py-2 space-x-4 z-10 pt-0 md:pt-33 mt-4 md:mt-0">
 
 
-      {/* Cards */}
-      <div className="flex flex-col space-y-8 w-full max-w-3xl">
-        {cards.map((card, index) => {
-          const { borderColor, bgColor } = card
-          const isActive = activeCardIndex === index;
-          return (
-            <div
-              key={card.id}
-              ref={(el) => {
-                cardRefs.current[index] = el;
-              }}
+        {/* Cards */}
+        <div className="flex flex-col space-y-8 w-full max-w-3xl">
+          {cards.map((card, index) => {
+            const { borderColor, bgColor } = card
+            const isActive = activeCardIndex === index;
+            return (
+              <div
+                key={card.id}
+                ref={(el) => {
+                  cardRefs.current[index] = el;
+                }}
 
-              onClick={() => handleCardClick(index)}
-              className="rounded-[28px] p-5 border-b backdrop-blur-sm shadow-[0_0_5px_0_#A29DBB] w-full scroll-mt-43"
-              style={{
-                backgroundColor: bgColor, // keep transparent for content visibility
-                borderBottom: `4px solid ${borderColor}`,
-              }}
-            >
-              {/* Card Content */}
-              <div className="mb-4">
-                <span className="text-[#FFFFFF] font-medium text-[14px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue block mb-3">
-                  {card.category}
-                </span>
-                <span className="text-[#FFFFFF] font-bold text-[20px] md:text-[24px] leading-[140%] tracking-[0.01em] font-helvetica block mb-2">
-                  {card.title}
-                </span>
-                <span
-                  className="text-white font-bold text-[20px] md:text-[24px] leading-[140%] tracking-[0.01em] font-helvetica mt-2"
-                  dangerouslySetInnerHTML={{ __html: card.semititle }}
-                />
-                <p className="text-white font-normal text-[14px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue whitespace-pre-line mt-3">
-                  {card.description}
-                </p>
-              
-              </div>
-              {activeCardIndex === index && (
-                <div className="mt-4 relative "> {/* Make container relative for absolute positioning */}
-                  {/* Close Button */}
-                  <button
-                    onClick={() => setActiveCardIndex(null)} // Or your close handler
-                    className="absolute top-2 right-2 z-10 text-gray-500 hover:text-gray-700 focus:outline-none"
-                    aria-label="Close"
-                  >
-                    ✖
-                  </button>
-                  {/* Inner box with padding to prevent touching the close button or paragraph */}
-                  <div className="relative rounded-[8px] p-4 shadow-[0_0_5px_0_#A29DBB] max-w-2xl mx-auto">
-      {/* Background layer */}
-      <div className="absolute inset-0 bg-[rgba(255,255,255,0.6)] z-0 rounded-[8px]" />
+                onClick={() => handleCardClick(index)}
+                className="rounded-[28px] p-5 border-b backdrop-blur-sm shadow-[0_0_5px_0_#A29DBB] w-full scroll-mt-43"
+                style={{
+                  backgroundColor: bgColor, // keep transparent for content visibility
+                  borderBottom: `4px solid ${borderColor}`,
+                }}
+              >
+                {/* Card Content */}
+                <div className="mb-4">
+                  <span className="text-[#FFFFFF] font-medium text-[14px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue block mb-3">
+                    {card.category}
+                  </span>
+                  <span className="text-[#FFFFFF] font-bold text-[20px] md:text-[24px] leading-[140%] tracking-[0.01em] font-helvetica block mb-2">
+                    {card.title}
+                  </span>
+                  <span
+                    className="text-white font-bold text-[20px] md:text-[24px] leading-[140%] tracking-[0.01em] font-helvetica mt-2"
+                    dangerouslySetInnerHTML={{ __html: card.semititle }}
+                  />
+                  <p className="text-white font-normal text-[14px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue whitespace-pre-line mt-3">
+                    {card.description}
+                  </p>
 
-      {/* Content layer */}
-      <div className="relative z-10">
-        {/* Paragraph */}
-        <p className="font-rubik font-medium text-left
+                </div>
+                {activeCardIndex === index && (
+                  <div className="mt-4 relative "> {/* Make container relative for absolute positioning */}
+                    {/* Close Button */}
+                    <button
+                      onClick={() => setActiveCardIndex(null)} // Or your close handler
+                      className="absolute top-2 right-2 z-10 text-gray-500 hover:text-gray-700 focus:outline-none"
+                      aria-label="Close"
+                    >
+                      ✖
+                    </button>
+                    {/* Inner box with padding to prevent touching the close button or paragraph */}
+                    <div className="relative rounded-[8px] p-4 shadow-[0_0_5px_0_#A29DBB] max-w-2xl mx-auto">
+                      {/* Background layer */}
+                      <div className="absolute inset-0 bg-[rgba(255,255,255,0.6)] z-0 rounded-[8px]" />
+
+                      {/* Content layer */}
+                      <div className="relative z-10">
+                        {/* Paragraph */}
+                        <p className="font-rubik font-medium text-left
          text-[14px] md:text-[16px] leading-[140%] tracking-[0.01em] text-center text-[#2E2C32B2] mb-4">
-          To receive this case study please enter your email Address
-        </p>
+                          To receive this case study please enter your email Address
+                        </p>
 
-        {/* Large screen form (from md breakpoint) */}
-        <div className="hidden md:block md:w-[500px] mx-auto">
-          <div className="relative flex-1 max-w-lg mt-4">
-            {/* Email Input */}
-            <input
-              id="email"
-              type="text"
-              placeholder="Enter Your Email"
-              className="
+                        {/* Large screen form (from md breakpoint) */}
+                        <div className="hidden md:block md:w-[500px] mx-auto">
+                          <div className="relative flex-1 max-w-lg mt-4">
+                            {/* Email Input */}
+                            <input
+                              id="email"
+                              type="text"
+                              placeholder="Enter Your Email"
+                              className="
                 w-full h-11 px-5 rounded-[18px] border-b border-white
                 shadow-[0_0_4px_0_rgba(0,0,0,0.25)]
                 bg-white outline-none pr-32
                 placeholder:text-[#2E2C324D]
                 font-roboto font-medium text-[16px]
               "
-            />
-            {/* Submit Button */}
-            <button
-              type="button"
-              className="
+                            />
+                            {/* Submit Button */}
+                            <button
+                              type="button"
+                              className="
                 absolute top-0 right-0 h-11 w-28 rounded-tr-[18px] rounded-br-[18px]
                 bg-[#9B87F5] flex items-center justify-center cursor-pointer
               "
-            >
-              <span className="font-roboto text-[14px] md:text-[16px] leading-6 text-[#FAFAFA] text-center align-middle ">
-                Submit
-              </span>
-            </button>
-          </div>
+                            >
+                              <span className="font-roboto text-[14px] md:text-[16px] leading-6 text-[#FAFAFA] text-center align-middle ">
+                                Submit
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+
+                        {/* Mobile version (below md) */}
+                        <div className="block md:hidden pt-4 space-y-4 max-w-md mx-auto">
+                          <input
+                            type="email"
+                            placeholder="Enter Your Email"
+                            className="w-full border-gray-300 focus:border-purple-500 focus:ring-purple-500 px-4 py-2 rounded-lg bg-white"
+                          />
+                          <button className="w-full bg-[#570B97] hover:bg-[#570B97] px-4 py-2 rounded-lg text-white text-[14px]">
+                            Let’s Talk
+                          </button>
+                        </div>
+
+                        {/* Additional message with icon */}
+                        <div className="flex  items-start ">
+                          <Info className='text-[#3A3A3A] w-5 h-5 mt-2' />
+                          <p className="font-rubik font-normal text-[14px] md:text-[16px] leading-[140%] tracking-[0.01em] text-[#3A3A3A] px-4 py-2 rounded-[8px] ml-2">
+                            The case study will be shared within 24 hours
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                )}
+                <button
+                  className="flex items-center space-x-1 mt-2 cursor-pointer"
+                  onClick={() => setActiveCardIndex(isActive ? null : index)}
+                >
+                  <span
+                    className="font-medium text-[14px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue
+      text-white">
+                    {isActive ? 'Read Less' : 'Read More'}
+                  </span>
+                  {isActive ? <ArrowDownRight className='text-white w-5 h-5' /> : <ArrowUpRight className='text-white w-5 h-5' />}
+                </button>
+              </div>
+            )
+          })}
+
         </div>
 
-        {/* Mobile version (below md) */}
-        <div className="block md:hidden pt-4 space-y-4 max-w-md mx-auto">
-          <input
-            type="email"
-            placeholder="Enter Your Email"
-            className="w-full border-gray-300 focus:border-purple-500 focus:ring-purple-500 px-4 py-2 rounded-lg bg-white"
-          />
-          <button className="w-full bg-[#570B97] hover:bg-[#570B97] px-4 py-2 rounded-lg text-white text-[14px]">
-            Let’s Talk
-          </button>
+
+
+        {/* Dots */}
+        <div className="sticky top-[200px] md:top-[300px]  self-start z-50 flex flex-col items-center  space-y-4">
+          {cards.map((card, index) => {
+            const isActive = index === activeIndex;
+            const style = {
+              backgroundColor: isActive ? card.bgColor : '#B4A7D5', // inactive dots background color
+              border: isActive ? 'none' : '1px solid #570B97', // optional border for inactive dots
+            };
+
+            return (
+              <button
+                key={card.id}
+                onClick={() => handleDotClick(index)}
+                style={style}
+                className={`w-2 h-2 rounded-full cursor-pointer transition-all duration-300 focus:outline-none ${isActive ? 'scale-125' : ''
+                  }`}
+                aria-label={`Go to ${card.title}`}
+              />
+            );
+          })}
         </div>
-
-        {/* Additional message with icon */}
-        <div className="flex  items-start ">
-        <Info className='text-[#3A3A3A] w-5 h-5 mt-2' />
-  <p className="font-rubik font-normal text-[14px] md:text-[16px] leading-[140%] tracking-[0.01em] text-[#3A3A3A] px-4 py-2 rounded-[8px] ml-2">
-    The case study will be shared within 24 hours
-  </p>
-</div>
-      </div>
-    </div>
-   
-                </div>
-              )}
-            <button
-  className="flex items-center space-x-1 mt-2 cursor-pointer"
-  onClick={() => setActiveCardIndex(isActive ? null : index)}
->
-  <span
-    className="font-medium text-[14px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue
-      text-white"
- 
-  >
-    {isActive ? 'Read Less' : 'Read More'}
-  </span>
- 
-
-  {isActive ? <ArrowDownRight className='text-white w-5 h-5' />   :  <ArrowUpRight className='text-white w-5 h-5' />   }
-</button>
-            </div>
-          )
-        })}
-
       </div>
 
-
-
-      {/* Dots */}
-      <div className="sticky top-[200px] md:top-[300px]  self-start z-50 flex flex-col items-center  space-y-4">
-        {cards.map((card, index) => {
-          const isActive = index === activeIndex;
-          const style = {
-            backgroundColor: isActive ? card.bgColor : '#B4A7D5', // inactive dots background color
-            border: isActive ? 'none' : '1px solid #570B97', // optional border for inactive dots
-          };
-
-          return (
-            <button
-              key={card.id}
-              onClick={() => handleDotClick(index)}
-              style={style}
-              className={`w-2 h-2 rounded-full cursor-pointer transition-all duration-300 focus:outline-none ${isActive ? 'scale-125' : ''
-                }`}
-              aria-label={`Go to ${card.title}`}
-            />
-          );
-        })}
-      </div>
-    </div>
-   
     </div>
   )
 }

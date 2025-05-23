@@ -15,8 +15,6 @@ export default function Home() {
       <DataTraining/>
       <AboutUs/>
       <Footer/>
-    
-
       </div>
  
   </>)

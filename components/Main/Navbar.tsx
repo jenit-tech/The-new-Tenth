@@ -12,34 +12,30 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 w-full flex items-center justify-between h-[70px] md:h-[144px] px-9 md:px-14  py-3 bg-[#F2F0FA]  z-50 ">
       {/* Logo Image */}
       <a href="#home">
-  <Image
-    src="/logo.png"
-    alt="Description"
-    width={120}
-    height={120}
-    className="w-12 md:w-[120px] px-1 md:px-3" // Using arbitrary value for styling
-  />
-</a>
-     
-
+        <Image
+          src="/logo.png"
+          alt="Description"
+          width={120}
+          height={120}
+          className="w-12 md:w-[120px] " 
+        />
+      </a>
       {/* Desktop & Tablet Menu */}
-
       <div className="hidden md:flex items-center justify-center flex-1 max-w-4xl space-x-8">
-
         {/* Button 1 */}
         <div className="flex space-x-2">
           <button
             className="py-1 px-2 rounded-[33px]"
 
           >
-       <a
-    href="#company-section"
-    className="relative inline-block font-roboto  font-medium text-[#570B97] capitalize transition-all duration-200 hover:text-[#8C72D0]"
-  >
-    <span className="border-b-2 text-[16px] border-transparent pb-1 hover:border-[#8C72D0]  transition-all duration-200">
-      Our Clients
-    </span>
-  </a>
+            <a
+              href="#company-section"
+              className="relative inline-block font-roboto  font-medium text-[#570B97] capitalize transition-all duration-200 hover:text-[#8C72D0]"
+            >
+              <span className="border-b-2 text-[16px] border-transparent pb-1 hover:border-[#8C72D0]  transition-all duration-200">
+                Our Clients
+              </span>
+            </a>
           </button>
         </div>
 
@@ -49,31 +45,29 @@ const Navbar = () => {
             className="py-1 px-2 rounded-[33px]"
 
           >
-           <a
-    href="#data-training"
-    className="relative inline-block font-roboto  font-medium text-[#570B97] capitalize transition-all duration-200 hover:text-[#8C72D0]"
-  >
-    <span className="border-b-2 text-[16px] border-transparent pb-1 hover:border-[#8C72D0] px-1 transition-all duration-200">
-      Training
-    </span>
-  </a>
+            <a
+              href="#data-training"
+              className="relative inline-block font-roboto  font-medium text-[#570B97] capitalize transition-all duration-200 hover:text-[#8C72D0]"
+            >
+              <span className="border-b-2 text-[16px] border-transparent pb-1 hover:border-[#8C72D0] px-1 transition-all duration-200">
+                Training
+              </span>
+            </a>
           </button>
         </div>
 
         {/* Button 3 */}
         <div className="flex space-x-2">
           <button
-            className="py-1 px-2 rounded-[33px]"
-
-          >
-           <a
-    href="#about"
-    className="relative inline-block font-roboto  font-medium text-[#570B97] capitalize transition-all duration-200 hover:text-[#8C72D0]"
-  >
-    <span className="border-b-2 text-[16px] border-transparent pb-1 hover:border-[#8C72D0] px-1 transition-all duration-200">
-      About Us
-    </span>
-  </a>
+            className="py-1 px-2 rounded-[33px]" >
+            <a
+              href="#about"
+              className="relative inline-block font-roboto  font-medium text-[#570B97] capitalize transition-all duration-200 hover:text-[#8C72D0]"
+            >
+              <span className="border-b-2 text-[16px] border-transparent pb-1 hover:border-[#8C72D0] px-1 transition-all duration-200">
+                About Us
+              </span>
+            </a>
           </button>
         </div>
 
@@ -126,7 +120,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      
+
       <div
         className={`w-full
     fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out bg-gradient-to-b from-purple-50 via-white to-purple-50
@@ -152,12 +146,12 @@ const Navbar = () => {
 
           {/* Contact form in mobile menu */}
           <div className="relative w-full">
-  {/* Input */}
-  <input
-    id="email"
-    type="text"
-    placeholder="Enter Your Email"
-    className="
+            {/* Input */}
+            <input
+              id="email"
+              type="text"
+              placeholder="Enter Your Email"
+              className="
       w-full h-15 px-5 pr-32 rounded-[18px] border-b border-white
       shadow-[0_0_4px_0_rgba(0,0,0,0.25)]
       bg-transparent outline-none
@@ -166,28 +160,28 @@ const Navbar = () => {
       placeholder:tracking-wide placeholder:leading-relaxed
       text-[#2E2C32]
     "
-  />
-  {/* Button */}
-  <button
-    type="button"
-    className="
+            />
+            {/* Button */}
+            <button
+              type="button"
+              className="
       absolute top-0 right-0 h-15 w-[100px] rounded-tr-[18px] rounded-br-[18px]
       bg-[#570B97] flex items-center justify-center
       border-0
       cursor-pointer 
     "
-  >
-    <span
-      className="
+            >
+              <span
+                className="
         font-roboto text-[14px] text-base leading-6
         text-[#FAFAFA]
         text-center align-middle
       "
-    >
-      Let’s Talk
-    </span>
-  </button>
-</div>
+              >
+                Let’s Talk
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </nav>
