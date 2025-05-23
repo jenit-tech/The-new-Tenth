@@ -18,7 +18,7 @@ const Footer = () => {
         </div>
 
         {/* Navigation links */}
-        <div className="pointer-events-none flex flex-col md:gap-2 md:w-auto">
+        <div className="pointer-events-none flex flex-col md:gap-2 md:w-auto mr-0 md:mr-20 mb-3 md:mb-0">
   <a
     href="#company-section"
     className="pointer-events-auto font-roboto py-1 md:px-3 mt:0 md:mt-2 font-normal text-[14px] md:text-[16px] leading-[100%] tracking-[0%] text-[#570B97] whitespace-nowrap"
@@ -34,7 +34,7 @@ const Footer = () => {
 </div>
 
         {/* Address section */}
-        <div className="md:w-[40%] ml-0 md:ml-0 mt-0 md:mt-5">
+        <div className="md:w-[40%]  md:ml-0 mt-0 md:mt-5 ">
           <p className="font-roboto font-normal pb-2 text-[14px] md:text-[16px] leading-[100%] tracking-[0%] text-[#570B97]">
             36 Robinson Road, #20-01,
           </p>
