@@ -126,7 +126,7 @@ const Footer = () => {
             © 2025 The Tenth Floor Pte Ltd. All rights reserved.
           </p>
           <a
-  href=""
+  href="PrivacyPolicy.pdf"
   target="_blank"
   rel="noopener noreferrer"
   className="font-roboto font-normal text-[14px] md:text-[16px] leading-[140%] tracking-[0.01em] align-middle text-[#570B97] hover:underline cursor-pointer"
