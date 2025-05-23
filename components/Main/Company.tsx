@@ -11,13 +11,13 @@ const Company = () => {
       {/* Left Content */}
       <div className="w-full lg:w-1/2 m-5 pr-7 md:pr-0">
       <div className="sticky top-60">
-         <h2 className=" font-roboto font-bold text-[28px] md:text-[32px] leading-[100%]  align-middle text-[#570B97] pb-1">
+         <h2 className=" font-roboto font-bold text-[28px] md:text-[32px] leading-[100%]  lg:leading-[38px]   align-middle text-[#570B97] pb-1">
   ACROSS REGIONS, 
 </h2>
-<h2 className=" font-roboto font-bold text-[28px] md:text-[32px] leading-[100%]  align-middle text-[#570B97] pb-4">
+<h2 className=" font-roboto font-bold text-[28px] md:text-[32px] leading-[100%] lg:leading-[38px]   align-middle text-[#570B97] pb-4">
    ACROSS INDUSTRIES
 </h2>
-<p className="font-medium text-[13px] md:text-[16px] leading-[140%] tracking-[0.01em] align-middle font-helveticaNeue text-[#570B97]">
+<p className="font-medium text-[12px] md:text-[16px] leading-[140%]   tracking-[0.01em] align-middle font-helveticaNeue text-[#570B97]">
   We have worked with clients across continents and industries, mining insights hiding in plain sight.
 </p>
 

@@ -36,17 +36,17 @@ const HomePage = () => {
              SIMPLE, EFFICIENT, PRECISE
            </p>
            <div className="space-y-6">
-  <p className=" font-heleveticaNeue font-normal text-[13px] md:text-[16px] leading-[1.4] tracking-[0.01em] align-middle text-[#570B97] mt-4 whitespace-pre-line">
+  <p className=" font-heleveticaNeue font-normal text-[12px] md:text-[16px] leading-[1.4] tracking-[0.01em] align-middle text-[#570B97] mt-4 whitespace-pre-line">
     Our approach is simple but powerful. We combine your existing data with public 
     information and advanced analytics to reveal patterns others miss.
   </p>
 
-  <p className=" font-heleveticaNeue font-normal text-[13px] md:text-[16px] leading-[1.4] tracking-[0.01em] align-middle text-[#570B97] mt-4 whitespace-pre-line">
+  <p className=" font-heleveticaNeue font-normal text-[12px] md:text-[16px] leading-[1.4] tracking-[0.01em] align-middle text-[#570B97] mt-4 whitespace-pre-line">
     No unnecessary complexity, just clear insights that help you reach customers faster and 
     more efficiently.
   </p>
 
-  <p className=" font-heleveticaNeue font-normal text-[13px] md:text-[16px] leading-[1.4] tracking-[0.01em] align-middle text-[#570B97] mt-4 whitespace-pre-line">
+  <p className=" font-heleveticaNeue font-normal text-[12px] md:text-[16px] leading-[1.4] tracking-[0.01em] align-middle text-[#570B97] mt-4 whitespace-pre-line">
   The result? Strategies that work better and cost less. We&apos;re self-funded, independent 
   and focused on one thing: delivering results you can measure.
 </p>

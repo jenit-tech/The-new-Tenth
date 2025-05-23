@@ -25,9 +25,9 @@ const Navbar = () => {
           >
        <a
     href="#company-section"
-    className="relative inline-block font-roboto text-[17px] font-medium text-[#570B97] capitalize transition-all duration-200 hover:text-[#8C72D0]"
+    className="relative inline-block font-roboto  font-medium text-[#570B97] capitalize transition-all duration-200 hover:text-[#8C72D0]"
   >
-    <span className="border-b-2 border-transparent pb-1 hover:border-[#8C72D0]  transition-all duration-200">
+    <span className="border-b-2 text-[16px] border-transparent pb-1 hover:border-[#8C72D0]  transition-all duration-200">
       Our Clients
     </span>
   </a>
@@ -42,9 +42,9 @@ const Navbar = () => {
           >
            <a
     href="#data-training"
-    className="relative inline-block font-roboto text-[17px] font-medium text-[#570B97] capitalize transition-all duration-200 hover:text-[#8C72D0]"
+    className="relative inline-block font-roboto  font-medium text-[#570B97] capitalize transition-all duration-200 hover:text-[#8C72D0]"
   >
-    <span className="border-b-2 border-transparent pb-1 hover:border-[#8C72D0] px-1 transition-all duration-200">
+    <span className="border-b-2 text-[16px] border-transparent pb-1 hover:border-[#8C72D0] px-1 transition-all duration-200">
       Training
     </span>
   </a>
@@ -59,9 +59,9 @@ const Navbar = () => {
           >
            <a
     href="#about"
-    className="relative inline-block font-roboto text-[17px] font-medium text-[#570B97] capitalize transition-all duration-200 hover:text-[#8C72D0]"
+    className="relative inline-block font-roboto  font-medium text-[#570B97] capitalize transition-all duration-200 hover:text-[#8C72D0]"
   >
-    <span className="border-b-2 border-transparent pb-1 hover:border-[#8C72D0] px-1 transition-all duration-200">
+    <span className="border-b-2 text-[16px] border-transparent pb-1 hover:border-[#8C72D0] px-1 transition-all duration-200">
       About Us
     </span>
   </a>
@@ -89,7 +89,7 @@ const Navbar = () => {
             type="button"
             className="cursor-pointer
       absolute top-0 right-0 h-11 w-28 rounded-tr-[18px] rounded-br-[18px]
-      bg-[#570B97] flex items-center justify-center
+      bg-[#570B97] flex items-center justify-center hover:bg-[#8C72D0]
     "
           >
             <span
@@ -124,7 +124,7 @@ const Navbar = () => {
     ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}
   `}
       >
-        <div className="w-full p-5 flex flex-col space-y-6 h-full overflow-y-auto">
+        <div className="w-full p-5 flex flex-col space-y-4 h-full overflow-y-auto">
           {/* Navigation items */}
           {[
             { label: "Our Clients", href: "#company-section" },
@@ -134,7 +134,7 @@ const Navbar = () => {
             <a
               key={item.label}
               href={item.href}
-              className="text-gray-900 hover:text-purple-800 text-xl font-medium transition-colors"
+              className="text-gray-900 hover:text-purple-800 text-[12px] font-medium transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               {item.label}
@@ -165,7 +165,7 @@ const Navbar = () => {
       absolute top-0 right-0 h-15 w-[100px] rounded-tr-[18px] rounded-br-[18px]
       bg-[#570B97] flex items-center justify-center
       border-0
-      cursor-pointer
+      cursor-pointer 
     "
   >
     <span

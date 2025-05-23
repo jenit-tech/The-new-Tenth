@@ -172,7 +172,7 @@ useEffect(() => {
             >
               {/* Card Content */}
               <div className="mb-4">
-                <span className="text-[#FFFFFF] font-medium text-[13px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue block mb-3">
+                <span className="text-[#FFFFFF] font-medium text-[12px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue block mb-3">
                   {card.category}
                 </span>
                 <span className="text-[#FFFFFF] font-bold text-[20px] md:text-[24px] leading-[140%] tracking-[0.01em] font-helvetica block mb-2">
@@ -182,7 +182,7 @@ useEffect(() => {
                   className="text-white font-bold text-[20px] md:text-[24px] leading-[140%] tracking-[0.01em] font-helvetica mt-2"
                   dangerouslySetInnerHTML={{ __html: card.semititle }}
                 />
-                <p className="text-white font-normal text-[13px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue whitespace-pre-line mt-3">
+                <p className="text-white font-normal text-[12px] md:text-[16px] leading-[140%] tracking-[0.01em] font-heleveticaNeue whitespace-pre-line mt-3">
                   {card.description}
                 </p>
               
@@ -206,7 +206,7 @@ useEffect(() => {
       <div className="relative z-10">
         {/* Paragraph */}
         <p className="font-rubik font-medium text-left
-         text-[13px] md:text-[16px] leading-[140%] tracking-[0.01em] text-center text-[#2E2C32B2] mb-4">
+         text-[12px] md:text-[16px] leading-[140%] tracking-[0.01em] text-center text-[#2E2C32B2] mb-4">
           To receive this case study please enter your email Address
         </p>
 
@@ -256,7 +256,7 @@ useEffect(() => {
         {/* Additional message with icon */}
         <div className="flex  items-start ">
         <Info className='text-[#3A3A3A] w-5 h-5 mt-2' />
-  <p className="font-rubik font-normal text-[11px] md:text-[15px] leading-[140%] tracking-[0.01em] text-[#3A3A3A] px-4 py-2 rounded-[8px] ml-2">
+  <p className="font-rubik font-normal text-[12px] md:text-[16px] leading-[140%] tracking-[0.01em] text-[#3A3A3A] px-4 py-2 rounded-[8px] ml-2">
     The case study will be shared within 24 hours
   </p>
 </div>

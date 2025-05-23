@@ -6,7 +6,7 @@ const RightSideDataTraining = () => {
     <div className="w-full ">
       <div className="rounded-[28px]  px-5 md:px-14 pt-10   border-b bg-[#361C75]">
         <div className="mb-4">
-          <div className="font-sans text-[13px] md:text-[16px] text-white text-base leading-[140%] tracking-[0.01em]">
+          <div className="font-sans text-[12px] md:text-[16px] text-white text-base leading-[140%] tracking-[0.01em]">
             <p>
               At The Tenth Floor, we believe digital is just human behavior captured in data. Our training is designed to help you uncover meaning in that behavior, then act on it with clarity and confidence.
               This is not a course in tools. It’s a way of thinking.

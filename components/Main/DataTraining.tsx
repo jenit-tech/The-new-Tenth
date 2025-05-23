@@ -12,7 +12,7 @@ const DataTraining = () => {
             <h2 className="font-helveticaNeue font-bold text-[28px] md:text-[32px] leading-[1.2] tracking-[0.01em] text-[#570B97] mb-4">
               We preach what we practice: <span className="hidden sm:inline"> <br/></span> Data Training from Real World <span className="hidden sm:inline"> <br/></span> Practitioners
             </h2>
-            <p className="font-helveticaNeue font-normal text-[13px] md:text-[16px] leading-[1.4] tracking-[0.01em] text-[#570B97] mt-4">
+            <p className="font-helveticaNeue font-normal text-[12px] md:text-[16px] leading-[1.4] tracking-[0.01em] text-[#570B97] mt-4">
               No Code, Low Code, Data-Driven Insights is a dynamic training program designed <span className="hidden sm:inline"> <br/></span> to equip managers with essential tools for making informed, day-to-day decisions<span className="hidden sm:inline"> <br/></span> with ease and efficiency.
             </p>
           </div>
