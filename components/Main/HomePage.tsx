@@ -1,6 +1,5 @@
 import React from 'react'
 import RightSideBox from '../sub/RightSideBox'
-import { Mail, TriangleAlert, X } from 'lucide-react'
 
 
 const HomePage = () => {
