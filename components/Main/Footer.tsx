@@ -46,7 +46,7 @@ const Footer = () => {
         {/* Email input and button */}
         <div className="md:w-[40%] mt-4 md:mt-0">
           {/* Desktop view */}
-          <div className="hidden md:flex md:items-center md:space-x-2 pr-15">
+          <div className="hidden md:flex md:items-center md:space-x-2 pr-16">
             <div className="relative flex-1 max-w-lg">
               <input
                 id="email"
